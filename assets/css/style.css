@@ -596,6 +596,11 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.02em;line-height:1.25}
   font-weight:600;font-size:.85rem;padding:5px 11px;border-radius:6px}
 
 /* ===== AI 견적 챗봇 (ai-estimate) ===== */
+.page-hero.slim{padding:26px 0 22px}
+.page-hero.slim h1{font-size:clamp(1.35rem,2.2vw,1.8rem);margin-bottom:6px}
+.page-hero.slim p{font-size:.92rem;max-width:560px;margin:0 auto}
+.page-hero.slim .breadcrumb{margin-bottom:8px}
+.chat-section{padding:32px 0 60px}
 .chat-shell{max-width:880px;margin:0 auto;border:1px solid var(--border);border-radius:var(--radius-lg);
   background:#fff;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
 .chat-top{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--border);background:var(--bg-soft)}
