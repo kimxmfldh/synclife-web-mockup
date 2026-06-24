@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도입 요구사항 정리 가이드 — SyncLife</title>
+<meta name="description" content="표준 WMS·CRM&OMS를 우리 업무에 맞추려면 무엇을 정리해야 할까요? 도입·커스터마이징 요구사항을 정리하면 정확한 제안과 의도대로의 결과를 얻을 수 있습니다.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index" class="brand"><span class="logo"></span>SyncLife</a>
+    <ul class="nav-menu" id="navMenu">
+      <li class="has-dropdown"><a href="#">솔루션 ▾</a>
+        <div class="dropdown">
+          <a href="solution-wms">WMS 창고관리</a>
+          <a href="solution-oms">CRM &amp; OMS</a>
+          <a href="solution-ai">물류·유통 AI 에이전트</a>
+        </div>
+      </li>
+      <li><a href="service">구축·운영</a></li>
+      <li><a href="cases">고객사례</a></li>
+      <li><a href="ai-estimate" class="nav-ai">AI로 견적받기</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact" class="btn btn-primary">문의하기</a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- 히어로 -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">홈 · 구축·운영 · 도입 요구사항 정리 가이드</div>
+    <span class="eyebrow">Requirements Guide</span>
+    <h1>무엇을 어디까지 맞춰야 할까요?<br>도입 요구사항 정리부터</h1>
+    <p>SyncLife는 검증된 표준 솔루션을 고객 업무에 맞춰 커스터마이징해 드립니다. 그 출발점은 "우리 업무에 무엇이 필요한지"를 정리하는 것입니다.</p>
+  </div>
+</section>
+
+<!-- 정의 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What to prepare</span>
+      <h2 class="h2">도입 요구사항: 무엇을, 어디까지 맞출지</h2>
+    </div>
+    <div class="form-wrap">
+      <p class="lead" style="margin:0 auto 18px;text-align:left">수천만 원이 드는 차를 고민 없이 사는 분은 거의 없습니다. 옵션, 트림, 가격, 유지비를 따져 합리적으로 결정하죠. 우리 사업과 직결되는 시스템 도입도 마찬가지입니다.</p>
+      <p class="lead" style="margin:0 auto 18px;text-align:left">SyncLife는 백지에서 만드는 외주 개발이 아니라, <strong style="color:var(--ink)">이미 운영 중인 표준 WMS·CRM&amp;OMS·AI를 고객 환경에 맞춰 커스터마이징</strong>해 라이선스로 제공합니다. 그래서 "어떤 솔루션을, 우리 업무에 맞게, 어디까지 손봐야 하는지"를 정리해 두면 제안과 도입이 훨씬 빨라집니다.</p>
+      <p class="lead" style="margin:0 auto;text-align:left">정리가 막막하셔도 괜찮습니다. 아래에서 <strong style="color:var(--ink)">① 왜 정리가 필요한지 ② 어떻게 정리하는지 ③ 무엇을 점검하면 좋은지</strong>를 차례로 안내합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 왜 필요한가 3가지 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why it matters</span>
+      <h2 class="h2">요구사항 정리가 중요한 3가지 이유</h2>
+    </div>
+
+    <div class="showcase-row">
+      <div class="txt">
+        <span class="sec-num">첫째</span>
+        <h3>제안·견적의 정확성</h3>
+        <p><strong style="color:var(--ink)">모호한 요구 = 모호한 견적.</strong> "그냥 WMS 도입하고 싶어요"와 "우리 입고 검수는 박스 단위, 채널은 3곳 연동, 정산은 화주별"처럼 정리된 요청은 전혀 다른 제안을 받습니다.</p>
+        <p>요구사항이 정리돼 있으면 표준 기능으로 충분한 부분과 커스터마이징이 필요한 부분이 분명해져, 근거 있는 견적과 합리적인 도입 범위가 나옵니다.</p>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="shot">"그냥 WMS 도입" → 견적 들쭉날쭉<br>요구사항 정리 → 표준+커스터마이징 분리</div>
+      </div>
+    </div>
+
+    <div class="showcase-row rev">
+      <div class="txt">
+        <span class="sec-num">둘째</span>
+        <h3>말이 통하는 소통</h3>
+        <p>고객은 <strong style="color:var(--ink)">'어떻게 업무를 더 잘 돌릴지'</strong>에 집중하고, 우리는 <strong style="color:var(--ink)">'표준 기능으로 어디까지 되고 무엇을 맞춰야 하는지'</strong>를 봅니다.</p>
+        <p>예를 들어 "입고 검수를 강화하고 싶어요"라고 하면 — 바코드 스캔 단위는 박스인가 낱개인가? 차이 발생 시 자동 보류인가? 표준 기능에 있는가, 커스터마이징인가? 이 관점 차이를 메우는 것이 요구사항 정리입니다.</p>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="shot">"입고 검수 강화" 한 문장도<br>도입 관점에선 점검 항목이 여러 개</div>
+      </div>
+    </div>
+
+    <div class="showcase-row">
+      <div class="txt">
+        <span class="sec-num">셋째</span>
+        <h3>도입 결과가 기대와 일치</h3>
+        <p>생각과 다른 결과만큼 당황스러운 일은 없습니다. 요구사항 없이 "알아서 맞춰주세요"로 넘기면, 우리에게 익숙한 표준 방식으로 설정되어 기대와 어긋날 수 있습니다.</p>
+        <p>"출고 취소가 돼야 한다"는 한 줄도 — 현장 담당자가 직접 취소하는지, 관리자 승인 후 취소인지에 따라 설정이 달라집니다. <strong style="color:var(--ink)">예산이나 일정으로 범위를 조율할 때도 정리된 요구사항이 기준</strong>이 됩니다.</p>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="shot">"출고 취소" → 현장? 관리자 승인?<br>정해두면 설정이 의도대로</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 정리 방법 3가지 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How to organize</span>
+      <h2 class="h2">요구사항, 이렇게 정리하면 됩니다</h2>
+      <p class="lead">전문 문서가 아니어도 괜찮습니다. 아래 3가지만 정리해도 충분합니다.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <span class="sec-num">STEP 1</span>
+        <h3>현재 업무 흐름 정리</h3>
+        <p>지금 어떻게 일하고 있는지를 순서대로 적습니다. 누가(역할), 어디서(센터·채널), 무엇을(입고·출고·정산 등), 어떤 도구로(엑셀·타 시스템) 처리하는지. 가장 불편한 지점을 함께 표시하면 좋습니다.</p>
+      </div>
+      <div class="card">
+        <span class="sec-num">STEP 2</span>
+        <h3>표준 기능 대비 '꼭 필요한 것' 정리</h3>
+        <p>우리 업무에서 반드시 있어야 하는 기능과 규칙을 적습니다. 예: "검수는 박스 단위", "정산은 화주별 월마감", "특정 권한만 단가 조회". 표준에 없으면 커스터마이징 대상이 됩니다.</p>
+      </div>
+      <div class="card">
+        <span class="sec-num">STEP 3</span>
+        <h3>연동·규모·인프라 정리</h3>
+        <p>연동할 시스템(기존 ERP·쇼핑몰·택배사), 운영 규모(센터 수·사용자 수·월 물동량), 도입 인프라(클라우드/온프레미스) 희망을 적습니다. 도입 범위와 일정 산정의 기준이 됩니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 점검 기능 리스트 (물류·유통 도메인) -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Feature checklist</span>
+      <h2 class="h2">도입 시 점검하면 좋은 기능 목록</h2>
+      <p class="lead">요구사항을 정리할 때 참고할 수 있도록, 물류·유통 시스템에서 자주 쓰이는 기능을 정리했습니다. 우리 업무에 필요한 항목을 골라 표시해 보세요.</p>
+    </div>
+    <div class="grid grid-3">
+
+      <div class="card">
+        <h3>이용 환경</h3>
+        <ul class="spec-ul">
+          <li>PC 웹 / 반응형 웹</li>
+          <li>관리자(백오피스)</li>
+          <li>PDA · 바코드 단말</li>
+          <li>현장 키오스크 단말</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>입고 · 재고</h3>
+        <ul class="spec-ul">
+          <li>입고 등록 · 검수</li>
+          <li>바코드 / QR 스캔</li>
+          <li>재고 조회 · 조정</li>
+          <li>로케이션(위치) 관리</li>
+          <li>재고 실사</li>
+          <li>유통기한 · 로트 관리</li>
+          <li>안전재고 · 자동 알림</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>출고 · 주문</h3>
+        <ul class="spec-ul">
+          <li>주문 수집(채널 연동)</li>
+          <li>출고 지시 · 피킹 · 패킹</li>
+          <li>송장 · 거래명세서 출력</li>
+          <li>배송 추적</li>
+          <li>출고 취소 · 반품 · 교환</li>
+          <li>합포장 · 분할 출고</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>정산 · 통계</h3>
+        <ul class="spec-ul">
+          <li>정산 관리(화주·셀러별)</li>
+          <li>일 · 주 · 월 통계</li>
+          <li>기간 · 다중 항목 통계</li>
+          <li>대시보드 · 그래프</li>
+          <li>데이터 변경 이력 기록</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>연동 · 자동화</h3>
+        <ul class="spec-ul">
+          <li>택배사 API 연동</li>
+          <li>쇼핑몰 · 오픈마켓 연동</li>
+          <li>ERP · 회계 시스템 연동</li>
+          <li>주기적 데이터 처리(배치)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>AI 기능</h3>
+        <ul class="spec-ul">
+          <li>비정형 주문서 자동 변환</li>
+          <li>입출고 요청서 자동 작성</li>
+          <li>문서 OCR 인식</li>
+          <li>자연어 데이터 질의(Text-to-SQL)</li>
+          <li>이상 탐지 · 수요 예측</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>문서 · 입출력</h3>
+        <ul class="spec-ul">
+          <li>엑셀 임포트 / 익스포트</li>
+          <li>PDF 자동 출력</li>
+          <li>라벨 · 바코드 인쇄</li>
+          <li>대용량 파일 업로드</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>계정 · 권한</h3>
+        <ul class="spec-ul">
+          <li>로그인 · 인증</li>
+          <li>권한 · 등급 관리</li>
+          <li>다중 센터 · 화주 관리(멀티테넌시)</li>
+          <li>접근 로그 · 감사 추적</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>알림 · 소통</h3>
+        <ul class="spec-ul">
+          <li>이메일 · SMS 알림</li>
+          <li>카카오 알림톡</li>
+          <li>앱 푸시 알림</li>
+          <li>내 알림 내역</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 마무리 CTA -->
+<section>
+  <div class="container">
+    <div class="download-band">
+      <div>
+        <h3>요구사항 정리가 끝났다면?</h3>
+        <p>도입 상담 신청 시 정리하신 자료를 첨부해 주세요. 표준 기능·커스터마이징·라이선스·운영을 묶어 명확하게 제안해 드립니다.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="contact?type=BUILD" class="btn btn-primary">상담·견적 문의</a>
+        <a href="#" class="btn btn-kakao">카카오톡 상담</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="brand" style="font-size:1.6rem"><span class="logo"></span>SyncLife</div>
+      <div class="foot-actions">
+        <a href="assets/synclife-company.pdf" download class="btn btn-outline" style="color:#fff;border-color:#475569">회사소개서 다운로드</a>
+        <!-- TODO: 사업자등록번호 확정 시 공정위(FTC) 사업자정보공개 링크로 교체 -->
+        <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1388703297" target="_blank" rel="noopener" class="btn btn-outline" style="color:#fff;border-color:#475569">사업자정보확인</a>
+      </div>
+    </div>
+    <!-- 회사 정보: 주소·대표자명·사업자등록번호 반영완료 / 통신판매업신고=해당없음 -->
+    <div class="foot-biz">
+      <div><b>Korea Office</b>서울시 금천구 가산디지털1로 128 STXV타워 1302호 · (주)싱크라이프</div>
+      <div><b>TEL</b>02-811-2811 &nbsp;&nbsp; <b>E-MAIL</b>support@synclife.co.kr</div>
+      <div style="margin-top:8px"><b>대표자명</b>이진호 &nbsp;&nbsp; <b>사업자등록번호</b>138-87-03297</div>
+    </div>
+    <div class="foot-certs">
+      <span class="foot-cert">ISO 정보보호경영시스템</span>
+      <span class="foot-cert">벤처기업 확인</span>
+      <span class="foot-cert">기업부설 연구개발전담부서</span>
+      <span class="foot-cert">중소기업 확인</span>
+      <span style="margin-left:auto;color:#64748b;font-size:.85rem"><a href="privacy" style="color:#94a3b8;margin-right:14px">개인정보처리방침</a>© 2026 SyncLife. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="float-chat"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8s-4.5-8-10-8z"/></svg><span>카카오톡 상담</span></a>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click',function(){
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

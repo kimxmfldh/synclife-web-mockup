@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WMS 창고관리 — SyncLife</title>
+<meta name="description" content="입고·재고·로케이션·실사·출고까지 창고 운영 전 과정을 디지털화하는 SyncLife WMS.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index" class="brand"><span class="logo"></span>SyncLife</a>
+    <ul class="nav-menu" id="navMenu">
+      <li class="has-dropdown"><a href="#">솔루션 ▾</a>
+        <div class="dropdown">
+          <a href="solution-wms">WMS 창고관리</a>
+          <a href="solution-oms">CRM &amp; OMS</a>
+          <a href="solution-ai">물류·유통 AI 에이전트</a>
+        </div>
+      </li>
+      <li><a href="service">구축·운영</a></li>
+      <li><a href="cases">고객사례</a></li>
+      <li><a href="ai-estimate" class="nav-ai">AI로 견적받기</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact" class="btn btn-primary">문의하기</a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- 1. 히어로 -->
+<section class="page-hero sol">
+  <div class="container sol-grid">
+    <div>
+      <div class="breadcrumb">홈 · 솔루션 · WMS 창고관리</div>
+      <span class="eyebrow">WMS</span>
+      <h1>창고 운영의 모든 과정을<br>하나의 시스템으로</h1>
+      <p>입고 검수부터 적치·재고·실사·출고까지 — 수기와 분산된 관리를 끝내고 실시간으로 통제합니다.</p>
+      <div class="hero-cta" style="margin-top:28px">
+        <a href="contact?type=DEMO&solution=WMS" class="btn btn-primary btn-lg">데모 요청</a>
+        <a href="assets/synclife-wms-brochure.pdf" download class="btn btn-outline btn-lg">WMS 브로셔 다운로드</a>
+      </div>
+    </div>
+    <div class="hero-illus">
+      <span class="hi-chip c1"><span class="dot"></span>PDA 실시간</span>
+      <span class="hi-chip c2"><span class="dot"></span>화주별 분리</span>
+      <div class="hi-stack">
+        <div class="hi-tile grad" title="입고">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        </div>
+        <div class="hi-tile" title="로케이션">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        </div>
+        <div class="hi-tile" title="실사·품질">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg>
+        </div>
+        <div class="hi-tile" title="출고">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 문제 제기 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Problem</span>
+      <h2 class="h2">이런 어려움, 겪고 계신가요?</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>재고가 안 맞아요</h3><p>장부와 실물이 달라 재고조사 때마다 차이를 메우는 데 시간이 듭니다.</p></div>
+      <div class="card"><h3>입·출고 처리가 번거로워요</h3><p>입고 검수와 출고 피킹을 손으로 처리하다 보니 시간이 걸리고 오류가 반복됩니다.</p></div>
+      <div class="card"><h3>수기·엑셀로는 현황 파악이 어려워요</h3><p>엑셀로 관리하니 지금 무엇이 어디에 얼마나 있는지 한눈에 보기 어렵습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 기능 탭 explorer -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Features</span>
+      <h2 class="h2">기능별로 살펴보세요</h2>
+      <p class="lead">탭을 눌러 창고 운영의 각 기능을 확인하세요.</p>
+    </div>
+    <div class="feat-explorer">
+      <div class="feat-tabs">
+        <button class="on" data-tab="w1">입고·라벨</button>
+        <button data-tab="w2">로케이션·적치</button>
+        <button data-tab="w3">재고·FIFO</button>
+        <button data-tab="w4">품질·실사</button>
+        <button data-tab="w5">출고·피킹</button>
+        <button data-tab="w7">화주·정산</button>
+        <button data-tab="w6">운영·권한</button>
+      </div>
+
+      <div class="feat-panel on" data-tab="w1">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">입고 예정 대비, 정확한 검수</h3><p class="lead">예정 수량과 대조해 검수하고, 바코드 라벨을 발행·부착해 이후 모든 처리를 정확하게 시작합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>입고 예정 매칭</h3><p>예정 데이터와 실물을 대조해 검수합니다.</p></div>
+          <div class="card"><h3>바코드 라벨 발행·부착</h3><p>품목·로트 라벨을 발행해 추적의 기준을 만듭니다.</p></div>
+          <div class="card"><h3>검수 차이 기록</h3><p>예정과 다른 수량·상태를 이력으로 남깁니다.</p></div>
+        </div>
+      </div>
+
+      <div class="feat-panel" data-tab="w2">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">구역·랙·셀 단위 위치 관리</h3><p class="lead">창고를 구역·랙·셀로 체계화하고, 입고된 재고를 로케이션에 적치하며 위치를 관리합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>로케이션 체계</h3><p>구역·랙·셀 단위로 위치를 정의합니다.</p></div>
+          <div class="card"><h3>적치 처리</h3><p>입고된 재고를 지정한 로케이션에 적치합니다.</p></div>
+          <div class="card"><h3>재배치·이동</h3><p>재고 이동과 위치 변경을 기록합니다.</p></div>
+        </div>
+      </div>
+
+      <div class="feat-panel" data-tab="w3">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">실시간 재고와 선입선출(FIFO)</h3><p class="lead">재고를 실시간으로 반영하고, 소분·병합과 선입선출로 단위와 출고 순서를 정확히 관리합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>실시간 재고 조회·조정</h3><p>입출고와 동시에 재고가 갱신됩니다.</p></div>
+          <div class="card"><h3>소분·병합</h3><p>단위·포장 변경에 유연하게 대응합니다.</p></div>
+          <div class="card"><h3>선입선출(FIFO)</h3><p>입고 일자·로트 기준으로 먼저 들어온 재고부터 차감합니다.</p></div>
+        </div>
+      </div>
+
+      <div class="feat-panel" data-tab="w4">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">품질 상태와 재고조사</h3><p class="lead">품질 상태를 관리하고 전수/순환 재고조사로 장부와 실물의 차이를 잡습니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>품질 상태 관리</h3><p>가용·보류 등 재고 품질 상태를 관리합니다.</p></div>
+          <div class="card"><h3>전수·순환 재고조사</h3><p>전수 또는 순환 방식으로 재고를 조사합니다.</p></div>
+          <div class="card"><h3>차이 조정·이력</h3><p>차이를 조정하고 그 내역을 이력으로 남깁니다.</p></div>
+        </div>
+      </div>
+
+      <div class="feat-panel" data-tab="w5">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">주문 기반, 정확한 출고</h3><p class="lead">주문을 기준으로 피킹을 지시하고 검수 후 출고합니다. 반품까지 한 흐름으로 이어집니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>피킹 지시</h3><p>주문 기반으로 피킹 작업을 지시합니다.</p></div>
+          <div class="card"><h3>출고 검수·처리</h3><p>피킹 결과를 검수하고 출고 처리합니다.</p></div>
+          <div class="card"><h3>반품 처리</h3><p>반품 입고와 재고 반영을 처리합니다.</p></div>
+        </div>
+      </div>
+
+      <div class="feat-panel" data-tab="w7">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">화주별 운영과 물류비 정산</h3><p class="lead">여러 화주를 분리 운영하고, 입고·출고·보관 등 서비스별로 물류비를 집계해 화주별로 정산합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>화주사 관리</h3><p>화주별로 재고·입출고·권한을 분리해 한 시스템에서 운영합니다.</p></div>
+          <div class="card"><h3>물류비 정산</h3><p>입고·출고·보관 등 서비스별 물류비를 일별로 집계해 월 단위로 청구·정산합니다.</p></div>
+          <div class="card"><h3>화주별 통계·집계</h3><p>화주 단위로 물동량·정산 현황을 집계해 제공합니다.</p></div>
+        </div>
+      </div>
+
+      <div class="feat-panel" data-tab="w6">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">현장·직원·데이터를 함께</h3><p class="lead">PDA로 현장을 처리하고, 물류센터 직원·권한을 관리하며, 통계·대시보드로 분석합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>PDA 라벨 스캔</h3><p>라벨을 스캔하면 품목·수량·로트·제조일자 등 라벨 정보를 즉시 불러옵니다.</p></div>
+          <div class="card"><h3>직원·권한 관리</h3><p>물류센터 직원 정보와 메뉴별 권한(조회/편집)을 관리합니다.</p></div>
+          <div class="card"><h3>입·출고 프로세스 설정</h3><p>센터·업무 방식에 맞게 처리 규칙을 설정합니다.</p></div>
+          <div class="card"><h3>통계·대시보드</h3><p>주요 지표를 한 화면에서 실시간으로 확인합니다.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 상세 기능 (좌우 교차) -->
+<section>
+  <div class="container">
+    <div class="showcase-row">
+      <div class="txt">
+        <span class="sec-num">멀티테넌시</span>
+        <h3>화주가 여럿이어도, 데이터는 완전히 따로</h3>
+        <p>여러 화주의 재고를 한 창고에서 운영하면서도, 재고·입출고·이력·정산·권한이 화주 단위로 분리됩니다. 한 화주의 데이터가 다른 화주에게 노출되지 않습니다.</p>
+      </div>
+      <div class="browser dark"><div class="bar"><i></i><i></i><i></i></div><div class="shot">화주별 정산·현황 화면<br>(제품 스크린샷 자리)</div></div>
+    </div>
+    <div class="showcase-row rev">
+      <div class="txt">
+        <span class="sec-num">AI 연동</span>
+        <h3>입·출고 요청서를 AI가 대신</h3>
+        <p>여러 채널로 들어온 입·출고 요청을 물류·유통 AI 에이전트가 읽어 입출고 요청서로 만들어 WMS로 전달합니다. 수기 작성이 사라집니다.</p>
+      </div>
+      <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="shot">AI 입출고 요청서 화면<br>(제품 스크린샷 자리)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 업무 프로세스 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Workflow</span>
+      <h2 class="h2">입고부터 출고까지, 이렇게 흐릅니다</h2>
+    </div>
+    <div class="wf-grid">
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.1</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9"/><path d="m8 9 4 4 4-4"/><path d="M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg></span>
+        </div>
+        <h3 class="wf-title">입고 예정 등록</h3>
+        <p class="wf-desc">화주·공급처의 입고 예정 정보를 등록하고, PDA로 입고 검수를 시작할 준비를 합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.2</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0l-7.2-7.2A2 2 0 0 1 2.8 12V5.2a2 2 0 0 1 2-2h6.8a2 2 0 0 1 1.4.6l7.6 7.6a2 2 0 0 1 0 2z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span>
+        </div>
+        <h3 class="wf-title">검수·라벨 발행</h3>
+        <p class="wf-desc">입고 수량을 검수하고, 품목·로트·제조일자 정보를 담은 라벨(바코드)을 발행해 부착합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.3</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+        </div>
+        <h3 class="wf-title">로케이션 적치</h3>
+        <p class="wf-desc">라벨을 스캔해 지정된 로케이션에 적치하고, 재고 위치를 시스템에 실시간으로 반영합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.4</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
+        </div>
+        <h3 class="wf-title">보관·재고 관리</h3>
+        <p class="wf-desc">선입선출(FIFO) 기준으로 재고를 관리하고, 실시간 재고·실사로 재고 정합성을 유지합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.5</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9z"/><path d="m9.5 13 1.8 1.8 3.2-3.4"/></svg></span>
+        </div>
+        <h3 class="wf-title">주문 피킹</h3>
+        <p class="wf-desc">출고 요청을 기반으로 피킹 리스트를 생성하고, PDA로 품목을 정확하게 피킹합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.6</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17h1V7H3a1 1 0 0 0-1 1v9h2"/><path d="M14 9h4l3 3v5h-3"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="16.5" cy="17.5" r="2"/></svg></span>
+        </div>
+        <h3 class="wf-title">출고 처리</h3>
+        <p class="wf-desc">출고 검수 후 송장을 발행하고, 택배·운송장 연동으로 출고를 완료합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 도입 효과 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Benefits</span>
+      <h2 class="h2">도입하면 이렇게 달라집니다</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="effect"><span class="ar">↑</span><div><h3>재고 정확도 향상</h3><p>장부와 실물을 실시간으로 일치시켜 재고조사 때마다 반복되던 차이 메우기를 줄입니다.</p></div></div>
+      <div class="effect"><span class="ar">↓</span><div><h3>입·출고 처리 시간 단축</h3><p>PDA 바코드 스캔으로 검수·피킹을 현장에서 즉시 처리해 작업 시간과 오류를 줄입니다.</p></div></div>
+      <div class="effect"><span class="ar">✓</span><div><h3>수기·엑셀 업무 제거</h3><p>분산된 엑셀 관리를 시스템으로 대체해 누락·중복 입력과 버전 충돌을 없앱니다.</p></div></div>
+      <div class="effect"><span class="ar">◎</span><div><h3>실시간 현황 가시성</h3><p>무엇이 어디에 얼마나 있는지 한 화면에서 파악해 데이터로 의사결정합니다.</p></div></div>
+    </div>
+    <p class="lead" style="text-align:center;margin:28px auto 0;font-size:.9rem">* 실제 효과는 도입 환경·운영 방식에 따라 달라질 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- 7. 보안·데이터 안전 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Security</span>
+      <h2 class="h2">위탁받은 데이터를, 설계로 지킵니다</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>역할 기반 접근 제어</h3><p>메뉴별로 조회·편집 권한을 직원·권한그룹 단위로 부여하고, 센터·화주 범위로 접근을 분리합니다.</p></div>
+      <div class="card"><h3>변경 이력·감사 추적</h3><p>주요 작업의 처리 이력을 남겨, 누가·언제·무엇을 처리했는지 추적할 수 있습니다.</p></div>
+      <div class="card"><h3>로그인 기반 데이터 분리</h3><p>로그인한 계정의 권한 범위에 따라 자신의 화주·센터 데이터에만 접근하도록 제한합니다.</p></div>
+    </div>
+    <p class="lead" style="text-align:center;margin:26px auto 0;font-size:.9rem">* SyncLife는 <strong>ISO 정보보호경영시스템 인증</strong>(2024.12)을 보유하고 있습니다.</p>
+  </div>
+</section>
+
+<!-- 8. 도입 절차 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How to start</span>
+      <h2 class="h2">상담부터 오픈까지, 5단계</h2>
+    </div>
+    <div class="steps steps-5">
+      <div class="step"><div class="n">1</div><h3>상담</h3><p>현재 운영 방식과 도입 목표를 함께 확인합니다.</p></div>
+      <div class="step"><div class="n">2</div><h3>업무 분석</h3><p>입·출고 흐름과 커스터마이징 범위를 정리합니다.</p></div>
+      <div class="step"><div class="n">3</div><h3>설정·커스터마이징</h3><p>센터·업무 방식에 맞게 프로세스를 구성합니다.</p></div>
+      <div class="step"><div class="n">4</div><h3>데이터 이관</h3><p>기존 엑셀·시스템의 품목·재고를 옮깁니다.</p></div>
+      <div class="step"><div class="n">5</div><h3>오픈·안정화</h3><p>운영을 시작하고 초기 운영을 함께 점검합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">자주 묻는 질문</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>여러 화주를 한 시스템에서 운영해도 데이터가 섞이지 않나요?</summary>
+        <div class="faq-a">섞이지 않습니다. 화주별 분리(멀티테넌시) 구조로 재고·입출고·이력이 화주 단위로 격리되며, 직원 권한도 화주·센터 범위로 분리됩니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>기존에 쓰던 엑셀이나 다른 시스템의 데이터를 옮길 수 있나요?</summary>
+        <div class="faq-a">네. 품목·재고 등 기존 데이터를 정리해 옮기는 이관 절차를 도입 과정에서 함께 진행합니다. 정확한 범위는 상담 단계에서 데이터 형태를 확인한 뒤 정합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>우리 창고 운영 방식에 맞게 바꿀 수 있나요?</summary>
+        <div class="faq-a">표준 기능을 기준으로 입·출고 흐름과 처리 규칙을 센터·업무 방식에 맞게 설정하고, 필요한 부분은 커스터마이징해 배포합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>PDA 같은 현장 장비가 꼭 필요한가요?</summary>
+        <div class="faq-a">PDA·바코드 스캐너로 현장에서 검수·피킹을 즉시 처리할 수 있지만, 웹 화면만으로도 운영할 수 있습니다. 보유하신 장비에 맞춰 구성합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>클라우드와 자체 서버(온프레미스) 중 선택할 수 있나요?</summary>
+        <div class="faq-a">도입 환경에 맞춰 클라우드 또는 온프레미스로 배포할 수 있습니다. 자세한 구성은 상담 단계에서 정합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>도입 비용은 어떻게 산정되나요?</summary>
+        <div class="faq-a">도입 솔루션 범위·커스터마이징 정도·운영 규모에 따라 달라집니다. 상담 후 맞춤 견적으로 안내드립니다.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. 하단 CTA -->
+<section>
+  <div class="container">
+    <div class="download-band">
+      <div>
+        <h3>창고 운영, 지금부터 시스템으로</h3>
+        <p>도입 상담을 신청하시면 우리 창고 환경에 맞는 구성을 함께 잡아드립니다. <br>전화 02-811-2811 (평일 09:00–17:00)</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="contact?type=CONSULT&solution=WMS" class="btn btn-primary">도입 상담 신청</a>
+        <a href="contact?type=DEMO&solution=WMS" class="btn btn-outline">데모 요청</a>
+        <a href="case-wms" class="btn btn-outline">구축 사례 보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="brand" style="font-size:1.6rem"><span class="logo"></span>SyncLife</div>
+      <div class="foot-actions">
+        <a href="assets/synclife-company.pdf" download class="btn btn-outline" style="color:#fff;border-color:#475569">회사소개서 다운로드</a>
+        <!-- TODO: 사업자등록번호 확정 시 공정위(FTC) 사업자정보공개 링크로 교체 -->
+        <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1388703297" target="_blank" rel="noopener" class="btn btn-outline" style="color:#fff;border-color:#475569">사업자정보확인</a>
+      </div>
+    </div>
+    <!-- 회사 정보: 주소·대표자명·사업자등록번호 반영완료 / 통신판매업신고=해당없음 -->
+    <div class="foot-biz">
+      <div><b>Korea Office</b>서울시 금천구 가산디지털1로 128 STXV타워 1302호 · (주)싱크라이프</div>
+      <div><b>TEL</b>02-811-2811 &nbsp;&nbsp; <b>E-MAIL</b>support@synclife.co.kr</div>
+      <div style="margin-top:8px"><b>대표자명</b>이진호 &nbsp;&nbsp; <b>사업자등록번호</b>138-87-03297</div>
+    </div>
+    <div class="foot-certs">
+      <span class="foot-cert">ISO 정보보호경영시스템</span>
+      <span class="foot-cert">벤처기업 확인</span>
+      <span class="foot-cert">기업부설 연구개발전담부서</span>
+      <span class="foot-cert">중소기업 확인</span>
+      <span style="margin-left:auto;color:#64748b;font-size:.85rem"><a href="privacy" style="color:#94a3b8;margin-right:14px">개인정보처리방침</a>© 2026 SyncLife. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="float-chat"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8s-4.5-8-10-8z"/></svg><span>카카오톡 상담</span></a>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click',function(){
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+  document.querySelectorAll('.feat-explorer').forEach(function(ex){
+    ex.querySelectorAll('.feat-tabs button').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var t=btn.getAttribute('data-tab');
+        ex.querySelectorAll('.feat-tabs button').forEach(function(b){b.classList.toggle('on',b===btn);});
+        ex.querySelectorAll('.feat-panel').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-tab')===t);});
+      });
+    });
+  });
+</script>
+</body>
+</html>

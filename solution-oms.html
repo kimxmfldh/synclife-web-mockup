@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM &amp; OMS 거래처·수주발주·무역 관리 — SyncLife</title>
+<meta name="description" content="거래처·고객 관계부터 견적·수주·발주와 매출·매입 마감, 채권·정산은 물론 수출입면장·PPAP/IMDS 품질이 필요한 무역·제조 거래까지 한 흐름으로 잇는 SyncLife CRM &amp; OMS. 도매·유통부터 무역·제조 거래 기업까지.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index" class="brand"><span class="logo"></span>SyncLife</a>
+    <ul class="nav-menu" id="navMenu">
+      <li class="has-dropdown"><a href="#">솔루션 ▾</a>
+        <div class="dropdown">
+          <a href="solution-wms">WMS 창고관리</a>
+          <a href="solution-oms">CRM &amp; OMS</a>
+          <a href="solution-ai">물류·유통 AI 에이전트</a>
+        </div>
+      </li>
+      <li><a href="service">구축·운영</a></li>
+      <li><a href="cases">고객사례</a></li>
+      <li><a href="ai-estimate" class="nav-ai">AI로 견적받기</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact" class="btn btn-primary">문의하기</a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- 페이지 히어로 -->
+<section class="page-hero sol">
+  <div class="container sol-grid">
+    <div>
+      <div class="breadcrumb">홈 · 솔루션 · CRM &amp; OMS</div>
+      <span class="eyebrow">CRM &amp; OMS</span>
+      <h1>거래처를 중심으로<br>도매·유통부터 수출입·제조 거래까지</h1>
+      <p>주문이 아니라 거래처가 중심입니다. 거래처·고객 관계 관리부터 견적·수주·발주와 매출·매입 마감, 채권·정산까지 — 도매·유통은 물론 수출입면장·분할증명서, PPAP/IMDS 품질이 필요한 무역·제조 거래까지 한 흐름으로 잇습니다.</p>
+      <div class="hero-cta" style="margin-top:28px">
+        <a href="contact?type=DEMO&solution=OMS" class="btn btn-primary btn-lg">데모 요청</a>
+        <a href="assets/synclife-oms-brochure.pdf" download class="btn btn-outline btn-lg">CRM &amp; OMS 브로셔 다운로드</a>
+      </div>
+    </div>
+    <div class="hero-illus">
+      <span class="hi-chip c1"><span class="dot"></span>거래처 중심</span>
+      <span class="hi-chip c2"><span class="dot"></span>수주→정산 한 흐름</span>
+      <div class="hi-stack">
+        <div class="hi-tile grad" title="거래처·고객">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3-5 7-5s7 1.7 7 5"/><path d="M17 8h5M19.5 5.5v5"/></svg>
+        </div>
+        <div class="hi-tile" title="견적·수주">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>
+        </div>
+        <div class="hi-tile" title="발주·거래">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+        </div>
+        <div class="hi-tile" title="채권·정산">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 14h4"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 문제 제기 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Problem</span>
+      <h2 class="h2">이런 어려움, 겪고 계신가요?</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>고객 정보가 흩어져요</h3><p>고객·거래처 정보와 거래 이력이 엑셀·메일에 흩어져, 담당자가 바뀌면 맥락이 사라집니다.</p></div>
+      <div class="card"><h3>견적·수주·발주가 따로 놀아요</h3><p>견적부터 수주·발주, 마감까지 단계가 시스템으로 이어지지 않아 누락·중복이 생깁니다.</p></div>
+      <div class="card"><h3>채권·채무를 수기로 관리해요</h3><p>여신·채권채무와 정산을 엑셀로 관리하다 보니 오류와 마감 지연이 반복됩니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 핵심 기능 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Features</span>
+      <h2 class="h2">기능별로 살펴보세요</h2>
+      <p class="lead">탭을 눌러 거래처 관리부터 견적·수주·발주, 수출입·품질, 정산까지 각 기능을 확인하세요.</p>
+    </div>
+    <div class="feat-explorer">
+      <div class="feat-tabs">
+        <button class="on" data-tab="o1">고객·영업</button>
+        <button data-tab="o2">견적</button>
+        <button data-tab="o3">수주</button>
+        <button data-tab="o4">발주</button>
+        <button data-tab="o5">부대비·수출입</button>
+        <button data-tab="o6">채권·정산</button>
+        <button data-tab="o7">품질</button>
+      </div>
+      <div class="feat-panel on" data-tab="o1">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">거래처를 중심으로</h3><p class="lead">고객·거래처 관계와 영업, 기준 정보를 한 곳에서 관리합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>고객사·담당자 관리</h3><p>고객사 정보와 담당자(직책·부서·연락처)를 함께 관리합니다.</p></div>
+          <div class="card"><h3>영업기회·활동 이력</h3><p>영업 단계 파이프라인과 방문·통화·미팅 이력을 기록합니다.</p></div>
+          <div class="card"><h3>기초 정보</h3><p>거래처·품번/단가·환율 등 기준 정보를 일관되게 관리합니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="o2">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">견적(RFQ)으로 거래 시작</h3><p class="lead">매출·매입 견적을 접수·발송하고 제출·승인까지 관리합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>매출 RFQ 접수</h3><p>고객 요청 견적을 접수해 견적을 제출합니다.</p></div>
+          <div class="card"><h3>매입 RFQ 발송</h3><p>공급처에 견적을 요청하고 회신을 접수합니다.</p></div>
+          <div class="card"><h3>견적 제출·접수</h3><p>매출·매입 견적의 제출·접수 내역을 관리합니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="o3">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">매출 흐름 한 번에</h3><p class="lead">수주 입력부터 출고·선수금, 매출 마감·반품까지 이어집니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>수주 입력</h3><p>거래처 수주를 입력하고 진행 상태를 관리합니다.</p></div>
+          <div class="card"><h3>출고·선수금</h3><p>출고 처리와 선수금을 관리합니다.</p></div>
+          <div class="card"><h3>매출 마감·반품</h3><p>매출 마감과 반품 입고를 처리합니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="o4">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">매입 흐름 한 번에</h3><p class="lead">발주 입력부터 입고·선지급, 매입 마감·반품까지 이어집니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>발주 입력</h3><p>공급처 발주를 입력하고 진행 상태를 관리합니다.</p></div>
+          <div class="card"><h3>입고·선지급</h3><p>입고 처리와 선지급을 관리합니다.</p></div>
+          <div class="card"><h3>매입 마감·반품</h3><p>매입 마감과 반품 출고를 처리합니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="o5">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">무역 서류까지</h3><p class="lead">부대비와 수출입 서류를 거래에 연결해 관리합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>매출·매입 부대비</h3><p>거래에 따른 부대비를 집계·관리합니다.</p></div>
+          <div class="card"><h3>수출입면장</h3><p>수출입 거래의 면장을 관리합니다.</p></div>
+          <div class="card"><h3>분할증명서</h3><p>분할증명서 등 무역 서류를 관리합니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="o6">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">리스크와 마감 관리</h3><p class="lead">채권·채무와 여신, 거래처 정산을 시스템으로 관리합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>채권·채무</h3><p>거래처별 채권·채무를 관리합니다.</p></div>
+          <div class="card"><h3>여신·Credit</h3><p>여신 한도와 Credit 발급·접수를 관리합니다.</p></div>
+          <div class="card"><h3>거래처 정산·리포트</h3><p>거래처 정산을 집계하고 현황을 리포트로 제공합니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="o7">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">품질·인증 관리</h3><p class="lead">검수와 PPAP/IMDS, 부적합 처리로 품질을 관리합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>검수</h3><p>입고·출고 품질 검수를 처리합니다.</p></div>
+          <div class="card"><h3>PPAP / IMDS</h3><p>제조·부품 거래에 필요한 품질 문서(PPAP/IMDS)를 관리합니다.</p></div>
+          <div class="card"><h3>부적합·검사성적서</h3><p>부적합통보와 검사성적서를 관리합니다.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 제품 화면 쇼케이스 -->
+<section>
+  <div class="container">
+    <div class="showcase-row">
+      <div class="txt">
+        <span class="sec-num">수주·발주</span>
+        <h3>견적부터 수주·발주, 마감까지 한 흐름</h3>
+        <p>견적(RFQ)에서 수주·발주로, 다시 출고·입고와 매출·매입 마감까지 한 흐름으로 이어집니다. 선수금·선지급, 반품, 채권채무·정산까지 끊김 없이 연결됩니다.</p>
+      </div>
+      <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="shot">수주·발주 관리 화면<br>(제품 스크린샷 자리)</div></div>
+    </div>
+    <div class="showcase-row rev">
+      <div class="txt">
+        <span class="sec-num">고객 이력</span>
+        <h3>고객 이력까지 한눈에</h3>
+        <p>방문·통화·미팅 등 활동 이력을 고객 단위로 연결해, 한 화면에서 고객을 입체적으로 이해합니다.</p>
+      </div>
+      <div class="browser dark"><div class="bar"><i></i><i></i><i></i></div><div class="shot">고객 상세·이력 화면<br>(제품 스크린샷 자리)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 업무 프로세스 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Workflow</span>
+      <h2 class="h2">거래처부터 정산까지, 이렇게 흐릅니다</h2>
+    </div>
+    <div class="wf-grid">
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.1</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3-5 7-5s7 1.7 7 5"/><path d="M17 8h5M19.5 5.5v5"/></svg></span>
+        </div>
+        <h3 class="wf-title">거래처 등록</h3>
+        <p class="wf-desc">고객사·담당자와 영업 정보를 등록하고, 모든 거래의 기준이 되는 거래처를 관리합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.2</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg></span>
+        </div>
+        <h3 class="wf-title">견적(RFQ)</h3>
+        <p class="wf-desc">매출·매입 견적을 접수·발송하고, 제출부터 승인까지 견적 단계를 관리합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.3</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/><path d="M3 12a9 9 0 0 0 3 6.7"/></svg></span>
+        </div>
+        <h3 class="wf-title">수주·발주</h3>
+        <p class="wf-desc">거래처 수주와 공급처 발주를 입력하고, 각 주문의 진행 상태를 관리합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.4</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17h1V7H3a1 1 0 0 0-1 1v9h2"/><path d="M14 9h4l3 3v5h-3"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="16.5" cy="17.5" r="2"/></svg></span>
+        </div>
+        <h3 class="wf-title">출고·입고</h3>
+        <p class="wf-desc">출고와 입고를 처리하고, 선수금·선지급을 거래에 연결해 함께 관리합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.5</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg></span>
+        </div>
+        <h3 class="wf-title">마감</h3>
+        <p class="wf-desc">매출·매입을 마감하고, 반품 입고·출고까지 정리해 거래를 확정합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.6</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 3-4 3 3 4-6"/></svg></span>
+        </div>
+        <h3 class="wf-title">정산</h3>
+        <p class="wf-desc">채권·채무와 여신을 관리하고, 거래처별 정산을 집계해 리포트로 제공합니다.</p>
+      </div>
+    </div>
+    <p class="lead" style="text-align:center;margin:32px auto 0;font-size:.92rem">WMS·회계·SCM과 연동하고, 고객 업무에 맞춰 커스터마이징해 배포합니다.</p>
+  </div>
+</section>
+
+<!-- 도입 효과 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Benefits</span>
+      <h2 class="h2">도입하면 이렇게 달라집니다</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="effect"><span class="ar">◎</span><div><h3>거래처 하나로 관계~거래~정산</h3><p>거래처를 중심으로 관계·영업부터 그 거래처와의 수주·발주, 마감·정산까지 한 흐름으로 이어져 누락·중복을 없앱니다.</p></div></div>
+      <div class="effect"><span class="ar">↑</span><div><h3>고객 정보·이력 통합</h3><p>거래처와 영업기회·활동 이력을 한 곳에 모아, 담당자가 바뀌어도 맥락이 남습니다.</p></div></div>
+      <div class="effect"><span class="ar">✓</span><div><h3>채권·채무 리스크 관리</h3><p>여신·채권채무와 정산을 시스템으로 관리해 마감 오류와 미수 리스크를 줄입니다.</p></div></div>
+      <div class="effect"><span class="ar">◑</span><div><h3>무역·품질까지 한 시스템</h3><p>수출입면장·분할증명서, PPAP/IMDS 품질까지 같은 흐름에서 관리합니다.</p></div></div>
+    </div>
+    <p class="lead" style="text-align:center;margin:28px auto 0;font-size:.9rem">* 실제 효과는 도입 환경·운영 방식에 따라 달라질 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- 도입 기업 예시 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Who uses it</span>
+      <h2 class="h2">이런 기업에서 활용합니다</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>거래처가 많은 도매 · 유통사</h3><p>거래처별 관계·수발주와 채권채무·정산을 한 곳에서 통합 관리해야 하는 도매·유통 기업.</p></div>
+      <div class="card"><h3>거래처 관계가 중요한 B2B</h3><p>거래처와의 영업 관계·이력부터 실제 구매·판매 거래까지 이어서 관리해야 하는 B2B 기업.</p></div>
+      <div class="card"><h3>무역 · 제조 거래 기업</h3><p>수출입면장·분할증명서, PPAP/IMDS 품질까지 무역·제조 특화 기능이 함께 필요한 기업.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="case-oms" class="btn btn-outline">○○유통 CRM &amp; OMS 구축 사례 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- 보안·데이터 안전 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Security</span>
+      <h2 class="h2">고객 데이터를 안전하게 관리합니다</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>정보보호 인증 보유</h3><p>ISO 정보보호경영시스템 인증(2024.12)을 보유하고, 정보보호 체계에 따라 운영합니다.</p></div>
+      <div class="card"><h3>접근 권한 관리</h3><p>사용자 권한에 따라 접근 가능한 범위를 관리합니다.</p></div>
+      <div class="card"><h3>개인정보 보호</h3><p>고객 개인정보는 수집을 최소화하고 동의 기반으로 다루며, 처리방침에 따라 관리합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 도입 절차 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How to start</span>
+      <h2 class="h2">도입은 이렇게 진행됩니다</h2>
+      <p class="lead">기존 엑셀·데이터를 옮기고, 우리 영업 방식에 맞게 설정한 뒤 운영을 시작합니다.</p>
+    </div>
+    <div class="steps steps-5">
+      <div class="step"><div class="n">1</div><h3>상담·데모</h3><p>현재 영업 방식과 도입 목표를 함께 확인합니다.</p></div>
+      <div class="step"><div class="n">2</div><h3>환경 설정</h3><p>고객사 구조·영업 단계·커스텀 필드를 구성합니다.</p></div>
+      <div class="step"><div class="n">3</div><h3>데이터 이관</h3><p>엑셀 등 기존 고객·거래처 데이터를 옮깁니다.</p></div>
+      <div class="step"><div class="n">4</div><h3>사용 교육</h3><p>담당자가 바로 쓸 수 있도록 사용법을 안내합니다.</p></div>
+      <div class="step"><div class="n">5</div><h3>운영 시작</h3><p>실제 운영을 시작하고 초기 사용을 함께 점검합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">자주 묻는 질문</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>어떤 업무까지 다루나요?</summary>
+        <div class="faq-a">고객·영업 관리(CRM)부터 견적(RFQ), 수주·발주, 부대비·수출입, 채권·채무(여신), 품질(PPAP/IMDS), 정산·리포트까지 영업과 주문 업무를 한 시스템에서 운영합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>무역·수출입 업무도 지원하나요?</summary>
+        <div class="faq-a">네. 수출입면장·분할증명서 등 무역 서류와 PPAP/IMDS 품질 관리를 지원해, 수출입·제조 부품 거래에 맞게 운영할 수 있습니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>기존에 쓰던 엑셀·다른 시스템의 데이터를 옮길 수 있나요?</summary>
+        <div class="faq-a">엑셀 등 기존 고객·거래처 데이터를 옮기는 이관을 도입 과정에서 지원합니다. 정확한 범위는 상담 단계에서 데이터 형태를 확인한 뒤 정합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>우리 영업 방식에 맞게 항목을 바꿀 수 있나요?</summary>
+        <div class="faq-a">커스텀 필드로 관리 항목을 추가할 수 있고, 영업 단계도 환경 설정에서 조정할 수 있습니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>WMS·회계 시스템과 연동되나요?</summary>
+        <div class="faq-a">WMS(물류)·회계·SCM과 연동해 입출고·전표·공급망 데이터를 함께 운영할 수 있습니다. 연동 범위는 고객 환경에 맞춰 구성합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>데이터는 안전하게 관리되나요?</summary>
+        <div class="faq-a">SyncLife는 ISO 정보보호경영시스템 인증을 보유하고 있으며, 사용자 권한에 따른 접근 관리와 개인정보 수집 최소화·동의 기반 운영으로 고객 데이터를 보호합니다.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 CTA -->
+<section>
+  <div class="container">
+    <div class="download-band">
+      <div>
+        <h3>CRM &amp; OMS 도입을 검토 중이신가요?</h3>
+        <p>도입 상담을 신청하시거나, 브로셔·데모로 먼저 확인하세요. <br>전화 02-811-2811 (평일 09:00–17:00)</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="contact?type=CONSULT&solution=OMS" class="btn btn-primary">도입 상담 신청</a>
+        <a href="contact?type=DEMO&solution=OMS" class="btn btn-outline">데모 요청</a>
+        <a href="assets/synclife-oms-brochure.pdf" download class="btn btn-outline">브로셔 다운로드</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="brand" style="font-size:1.6rem"><span class="logo"></span>SyncLife</div>
+      <div class="foot-actions">
+        <a href="assets/synclife-company.pdf" download class="btn btn-outline" style="color:#fff;border-color:#475569">회사소개서 다운로드</a>
+        <!-- TODO: 사업자등록번호 확정 시 공정위(FTC) 사업자정보공개 링크로 교체 -->
+        <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1388703297" target="_blank" rel="noopener" class="btn btn-outline" style="color:#fff;border-color:#475569">사업자정보확인</a>
+      </div>
+    </div>
+    <!-- 회사 정보: 주소·대표자명·사업자등록번호 반영완료 / 통신판매업신고=해당없음 -->
+    <div class="foot-biz">
+      <div><b>Korea Office</b>서울시 금천구 가산디지털1로 128 STXV타워 1302호 · (주)싱크라이프</div>
+      <div><b>TEL</b>02-811-2811 &nbsp;&nbsp; <b>E-MAIL</b>support@synclife.co.kr</div>
+      <div style="margin-top:8px"><b>대표자명</b>이진호 &nbsp;&nbsp; <b>사업자등록번호</b>138-87-03297</div>
+    </div>
+    <div class="foot-certs">
+      <span class="foot-cert">ISO 정보보호경영시스템</span>
+      <span class="foot-cert">벤처기업 확인</span>
+      <span class="foot-cert">기업부설 연구개발전담부서</span>
+      <span class="foot-cert">중소기업 확인</span>
+      <span style="margin-left:auto;color:#64748b;font-size:.85rem"><a href="privacy" style="color:#94a3b8;margin-right:14px">개인정보처리방침</a>© 2026 SyncLife. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="float-chat"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8s-4.5-8-10-8z"/></svg><span>카카오톡 상담</span></a>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click',function(){
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+  document.querySelectorAll('.feat-explorer').forEach(function(ex){
+    ex.querySelectorAll('.feat-tabs button').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var t=btn.getAttribute('data-tab');
+        ex.querySelectorAll('.feat-tabs button').forEach(function(b){b.classList.toggle('on',b===btn);});
+        ex.querySelectorAll('.feat-panel').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-tab')===t);});
+      });
+    });
+  });
+</script>
+</body>
+</html>

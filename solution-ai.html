@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물류·유통 AI 에이전트 — SyncLife</title>
+<meta name="description" content="자연어로 물류 데이터를 묻고 문서 작업을 자동화하는, 물류·유통 도메인에 특화된 SyncLife AI 에이전트.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index" class="brand"><span class="logo"></span>SyncLife</a>
+    <ul class="nav-menu" id="navMenu">
+      <li class="has-dropdown"><a href="#">솔루션 ▾</a>
+        <div class="dropdown">
+          <a href="solution-wms">WMS 창고관리</a>
+          <a href="solution-oms">CRM &amp; OMS</a>
+          <a href="solution-ai">물류·유통 AI 에이전트</a>
+        </div>
+      </li>
+      <li><a href="service">구축·운영</a></li>
+      <li><a href="cases">고객사례</a></li>
+      <li><a href="ai-estimate" class="nav-ai">AI로 견적받기</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact" class="btn btn-primary">문의하기</a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- 페이지 히어로 -->
+<section class="page-hero sol">
+  <div class="container sol-grid">
+    <div>
+      <div class="breadcrumb">홈 · 솔루션 · 물류·유통 AI 에이전트</div>
+      <span class="eyebrow">AI AGENT</span>
+      <h1>말로 묻고<br>AI가 답하는 물류 데이터</h1>
+      <p>데이터 하나 보려고 담당자·개발자에게 요청하고 기다리던 일을 없앱니다. 물류·유통에 특화된 AI 에이전트에게 말로 물어 바로 확인하세요.</p>
+      <div class="hero-cta" style="margin-top:28px">
+        <a href="contact?type=DEMO&solution=AI" class="btn btn-primary btn-lg">데모 요청</a>
+        <a href="assets/synclife-ai-brochure.pdf" download class="btn btn-outline btn-lg">AI 에이전트 브로셔 다운로드</a>
+      </div>
+    </div>
+    <div class="hero-illus">
+      <span class="hi-chip c1"><span class="dot"></span>말로 물으면</span>
+      <span class="hi-chip c2"><span class="dot"></span>근거까지 함께</span>
+      <div class="hi-stack">
+        <div class="hi-tile grad" title="자연어 질의">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 11h8M8 14h5"/></svg>
+        </div>
+        <div class="hi-tile" title="데이터">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        </div>
+        <div class="hi-tile" title="도메인 AI">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 4.6L18 9l-4.1 1.4L12 15l-1.9-4.6L6 9l4.1-1.4z"/></svg>
+        </div>
+        <div class="hi-tile" title="읽기전용 안전">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 문제 제기 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Problem</span>
+      <h2 class="h2">이런 어려움, 겪고 계신가요?</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>매번 담당자에게 요청</h3><p>데이터 하나 보려고 담당자나 개발자에게 요청하고 기다려야 합니다.</p></div>
+      <div class="card"><h3>반복되는 문서 작업</h3><p>입출고 요청서·보고서 작성에 매일 같은 시간을 반복해서 씁니다.</p></div>
+      <div class="card"><h3>흩어진 데이터</h3><p>여러 시스템과 파일에 흩어진 데이터에서 원하는 답을 찾기 어렵습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 핵심 기능 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Features</span>
+      <h2 class="h2">기능별로 살펴보세요</h2>
+      <p class="lead">탭을 눌러 AI 에이전트의 각 기능을 확인하세요.</p>
+    </div>
+    <div class="feat-explorer">
+      <div class="feat-tabs">
+        <button class="on" data-tab="a1">자연어 질의</button>
+        <button data-tab="a2">멀티턴 대화</button>
+        <button data-tab="a3">도메인 특화</button>
+        <button data-tab="a4">읽기전용 보안</button>
+        <button data-tab="a5">주문서 변환(예정)</button>
+      </div>
+      <div class="feat-panel on" data-tab="a1">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">말로 물으면, 데이터로 답합니다</h3><p class="lead">자연어 질문을 조회 질의로 바꿔 실제 데이터를 집계해 답하고, 근거까지 함께 보여줍니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>자연어 → 조회</h3><p>질문 의도를 분석해 조회 질의를 생성합니다.</p></div>
+          <div class="card"><h3>집계·표로 응답</h3><p>결과를 표·요약으로 정리해 즉시 보여줍니다.</p></div>
+          <div class="card"><h3>답변 근거 제시</h3><p>사용한 조회 조건을 함께 제시해 출처를 확인합니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="a2">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">맥락을 기억하고 이어서</h3><p class="lead">직전 질문의 기간·대상을 기억해 후속 질문에 자연스럽게 이어 답합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>맥락 유지</h3><p>직전 대화의 기간·대상을 기억합니다.</p></div>
+          <div class="card"><h3>후속 질문</h3><p>"그럼 지난주는?"처럼 이어서 물을 수 있습니다.</p></div>
+          <div class="card"><h3>대화형 인터페이스</h3><p>채팅하듯 묻고 답하며 깊게 파고듭니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="a3">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">물류를 아는 AI</h3><p class="lead">물류·유통 도메인 규칙을 이해해 정확하게 데이터를 다룹니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>화주·거래처 구분</h3><p>화주사와 거래처를 구분해 집계합니다.</p></div>
+          <div class="card"><h3>완료·상태 분류</h3><p>입출고 완료·진행 상태 데이터를 자동 분류합니다.</p></div>
+          <div class="card"><h3>집계 규칙 반영</h3><p>수량 집계 규칙 등 업무 맥락을 반영합니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="a4">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">읽기 전용으로 안전하게</h3><p class="lead">조회만 허용하고 민감 정보는 제외하며, 여러 단계로 검증합니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>조회(SELECT)만 허용</h3><p>변경 명령은 실행 전 검사에서 차단합니다.</p></div>
+          <div class="card"><h3>민감 정보 제외·암호화</h3><p>민감 컬럼은 조회 대상에서 제외하고 접속 정보는 암호화합니다.</p></div>
+          <div class="card"><h3>다단계 검증</h3><p>의미 검증·오류 자동 보정으로 잘못된 질의를 거릅니다.</p></div>
+        </div>
+      </div>
+      <div class="feat-panel" data-tab="a5">
+        <div class="section-head"><h3 class="h2" style="font-size:clamp(1.3rem,2vw,1.8rem)">비정형 주문서 변환 <span class="badge-soon">개발 예정</span></h3><p class="lead">아래 기능은 현재 개발 예정(로드맵)입니다.</p></div>
+        <div class="grid grid-3">
+          <div class="card is-soon"><h3>비정형 주문서 변환<span class="badge-soon">예정</span></h3><p>제각각인 주문서를 표준 주문서로 변환해 OMS로 전달합니다.</p></div>
+          <div class="card is-soon"><h3>문서·리포트 자동화<span class="badge-soon">예정</span></h3><p>입출고 요청서 등 반복 문서를 자동 작성합니다.</p></div>
+          <div class="card is-soon"><h3>사용자 인증·격리<span class="badge-soon">예정</span></h3><p>사용자 인증과 테넌트별 데이터 격리를 외부 공개 전 적용합니다.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 핵심 차별화 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why SyncLife</span>
+      <h2 class="h2">범용 AI 빌더로 만들 필요 없이, 물류는 이미 완성</h2>
+      <p class="lead">범용 AI 에이전트 빌더는 어디에나 붙지만 물류 지식은 0부터 만들어야 합니다. SyncLife는 물류·유통 도메인과 검증 절차를 갖춘 완제품으로 바로 시작합니다.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>범용 AI 빌더로 직접 구축</h3>
+        <ul class="cmp-list">
+          <li><span class="mk x">✕</span><span>물류 도메인 지식을 0부터 정의해야 합니다.</span></li>
+          <li><span class="mk x">✕</span><span>화주사·거래처·입출고 규칙을 직접 설계·검증해야 합니다.</span></li>
+          <li><span class="mk x">✕</span><span>구축과 유지보수에 인력·시간이 듭니다.</span></li>
+          <li><span class="mk x">✕</span><span>만들고 검증하는 동안 도입이 늦어집니다.</span></li>
+        </ul>
+      </div>
+      <div class="card card-accent">
+        <h3>SyncLife 물류 AI<span class="badge">완제품</span></h3>
+        <ul class="cmp-list">
+          <li><span class="mk o">✓</span><span>물류·유통 도메인 규칙이 이미 내장되어 있습니다.</span></li>
+          <li><span class="mk o">✓</span><span>WMS·OMS 데이터와 네이티브로 연동됩니다.</span></li>
+          <li><span class="mk o">✓</span><span>조회 전용·다단계 검증이 기본 포함됩니다.</span></li>
+          <li><span class="mk o">✓</span><span>별도 구축 없이 바로 도입할 수 있습니다.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-head" style="margin-top:48px">
+      <h2 class="h2">물류를 아는 AI라서 가능한 것</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card"><h3>물류 도메인을 이해합니다</h3><p>화주사와 거래처를 구분하고, 입출고 완료·진행 상태 데이터를 자동으로 분류하며, 수량 집계 규칙 같은 업무 맥락을 반영합니다.</p></div>
+      <div class="card"><h3>추측이 아니라 실제 데이터로</h3><p>질문 의도를 분석해 조회 질의를 생성하고, 실행 전 안전 검사를 거쳐 실제 데이터를 조회한 결과로 답합니다.</p></div>
+      <div class="card"><h3>여러 단계로 검증합니다</h3><p>조회 전용 검사·의미 검증·오류 자동 보정 등 여러 단계를 거쳐 잘못된 질의를 걸러냅니다.</p></div>
+      <div class="card"><h3>답의 근거를 확인할 수 있습니다</h3><p>답을 만들 때 사용한 조회 조건과 결과 요약을 함께 제시해, 숫자의 출처를 확인할 수 있습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 제품 화면 쇼케이스 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="showcase-row">
+      <div class="txt">
+        <span class="sec-num">질의</span>
+        <h3>자연어로 묻고 즉시 확인</h3>
+        <p>"이번 주 출고 가장 많은 화주는?"처럼 말로 물으면 AI가 데이터를 집계해 즉시 답합니다.</p>
+      </div>
+      <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="shot">AI 자연어 질의 화면<br>(제품 스크린샷 자리)</div></div>
+    </div>
+    <div class="showcase-row rev">
+      <div class="txt">
+        <span class="sec-num">멀티턴</span>
+        <h3>맥락을 기억하고 이어서 답합니다</h3>
+        <p>"이번 주 출고 많은 화주는?" 다음에 "그럼 지난주는?"처럼 물어도, 직전 질문의 기간·대상을 기억해 자연스럽게 이어서 답합니다.</p>
+      </div>
+      <div class="browser dark"><div class="bar"><i></i><i></i><i></i></div><div class="shot">AI 멀티턴 대화 화면<br>(제품 스크린샷 자리)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 시스템 구성도 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Architecture</span>
+      <h2 class="h2">AI 에이전트는 이렇게 구성됩니다</h2>
+      <p class="lead">여러 입력을 받아 AI가 처리하고, WMS·OMS와 데이터로 연동됩니다.</p>
+    </div>
+    <div class="arch">
+      <div class="arch-layer">
+        <div class="layer-name">입력 채널</div>
+        <div class="arch-boxes">
+          <div class="arch-box">자연어 채팅</div>
+          <div class="arch-box">메일 · 메신저(WeChat 등)</div>
+          <div class="arch-box">주문서 · 문서 파일</div>
+        </div>
+      </div>
+      <div class="arch-arrow">⌄</div>
+      <div class="arch-layer core">
+        <div class="layer-name">AI 에이전트 코어</div>
+        <div class="arch-boxes">
+          <div class="arch-box">자연어 데이터 질의</div>
+          <div class="arch-box">대화형 인터페이스</div>
+          <div class="arch-box">도메인 특화 이해</div>
+          <div class="arch-box">비정형 주문서 변환 (예정)</div>
+          <div class="arch-box">문서 · 리포트 자동화 (예정)</div>
+        </div>
+      </div>
+      <div class="arch-arrow">⌄</div>
+      <div class="arch-layer">
+        <div class="layer-name">연동 대상</div>
+        <div class="arch-boxes">
+          <div class="arch-box">WMS(입출고 요청서)</div>
+          <div class="arch-box">CRM &amp; OMS(표준 주문서)</div>
+          <div class="arch-box">데이터 소스(DB)</div>
+        </div>
+      </div>
+      <div class="arch-arrow">⌄</div>
+      <div class="arch-layer">
+        <div class="layer-name">운영 기반</div>
+        <div class="arch-boxes">
+          <div class="arch-box">읽기 전용 안전 조회</div>
+          <div class="arch-box">민감 컬럼 제외 · 암호화</div>
+          <div class="arch-box">사용자 인증 · 테넌트 격리 (예정)</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="text-align:center;margin:32px auto 0;font-size:.92rem">표준 구성을 기준으로, 고객 데이터·업무에 맞춰 연동과 처리 방식을 커스터마이징해 배포합니다.</p>
+  </div>
+</section>
+
+<!-- 작동 방식 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2 class="h2">묻고, 안전하게 조회하고, 근거와 함께 받습니다</h2>
+    </div>
+    <div class="wf-grid">
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.1</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h8M8 13h5"/></svg></span>
+        </div>
+        <h3 class="wf-title">평소 쓰는 말로 묻기</h3>
+        <p class="wf-desc">"이번 주 출고가 가장 많은 화주는?"처럼 자연어로 질문합니다. 쿼리 문법은 필요 없습니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.2</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        </div>
+        <h3 class="wf-title">AI가 안전하게 조회</h3>
+        <p class="wf-desc">질문 의도를 분석해 조회 질의를 생성하고, 읽기 전용 검사·의미 검증·오류 자동 보정을 거쳐 실행합니다.</p>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-badge">Step.3</span>
+          <span class="wf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17V9M13 17V5M18 17v-6"/></svg></span>
+        </div>
+        <h3 class="wf-title">답과 근거를 함께</h3>
+        <p class="wf-desc">집계 결과를 표·요약으로 제시하고, 사용한 조회 조건을 함께 보여줍니다. 이어서 후속 질문도 가능합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 도입 효과 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Benefits</span>
+      <h2 class="h2">도입하면 이렇게 달라집니다</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="effect"><span class="ar">↓</span><div><h3>데이터 조회 대기 제거</h3><p>담당자·개발자에게 요청하고 기다릴 필요 없이, 말로 물어 바로 데이터를 확인합니다.</p></div></div>
+      <div class="effect"><span class="ar">◎</span><div><h3>묻는 즉시, 근거와 함께</h3><p>화면을 헤매지 않고 질문 한 번으로 집계 결과와 그 조회 근거를 바로 받습니다.</p></div></div>
+      <div class="effect"><span class="ar">✓</span><div><h3>이어서 더 깊게</h3><p>후속 질문으로 기간·대상을 바꿔가며 대화하듯 데이터를 파고들 수 있습니다.</p></div></div>
+      <div class="effect"><span class="ar">↑</span><div><h3>읽기 전용으로 안전하게</h3><p>조회만 허용하고 변경은 차단하며, 민감 정보는 처음부터 제외해 안전하게 활용합니다.</p></div></div>
+    </div>
+    <p class="lead" style="text-align:center;margin:28px auto 0;font-size:.9rem">* 실제 효과는 도입 환경·데이터 상태에 따라 달라질 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- 보안·데이터 안전 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Security</span>
+      <h2 class="h2">데이터를 안전하게 다루도록 설계했습니다</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><h3>읽기 전용 조회</h3><p>AI가 만드는 모든 질의는 조회(SELECT)만 허용하고, 추가·수정·삭제 명령은 실행 전 검사에서 차단합니다.</p></div>
+      <div class="card"><h3>민감 정보 사전 제외</h3><p>비밀번호 등 민감 컬럼은 조회 대상에서 처음부터 제외하고, DB 접속 정보는 암호화해 보관합니다.</p></div>
+      <div class="card"><h3>오류 원문 미노출</h3><p>내부 오류·DB 원시 에러를 사용자 화면에 그대로 노출하지 않습니다.</p></div>
+      <div class="card"><h3>다단계 검증</h3><p>조회 전용 검사·의미 검증·오류 자동 보정을 거쳐 잘못된 질의를 걸러냅니다.</p></div>
+    </div>
+    <div class="roadmap-box">
+      <div class="rt">외부 공개 전 적용 예정</div>
+      <div class="rd">현재는 조회 전용·민감정보 제외 중심으로 안전하게 동작하며, 다음 항목은 외부 공개 전 단계적으로 적용할 예정입니다.</div>
+      <div class="roadmap-phase"><span>사용자 인증</span><span>테넌트별 데이터 격리</span><span>사용자별 세분화 접근 권한</span></div>
+    </div>
+    <p class="lead" style="text-align:center;margin:26px auto 0;font-size:.9rem">* SyncLife는 <strong>ISO 정보보호경영시스템 인증</strong>(2024.12)을 보유하고 있습니다.</p>
+  </div>
+</section>
+
+<!-- 도입 기업 예시 -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Who uses it</span>
+      <h2 class="h2">이런 기업에서 활용합니다</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>WMS · OMS 운영 기업</h3><p>이미 운영 중인 데이터를 더 적극적으로 활용하고 싶은 기업이 자연어 질의·자동 문서로 확장합니다.</p></div>
+      <div class="card"><h3>비정형 주문서가 많은 무역 · 도매사</h3><p>메일·메신저로 제각각 들어오는 주문서를 표준으로 자동 변환해 수기 작업을 없앱니다.</p></div>
+      <div class="card"><h3>정기 보고·집계 부담이 큰 물류센터</h3><p>매일·매주 반복되는 보고와 집계를 자동화해 운영 인력의 시간을 확보합니다.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="cases" class="btn btn-outline">고객사례 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- 도입 절차 -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How to start</span>
+      <h2 class="h2">상담부터 활용까지, 이렇게 시작합니다</h2>
+      <p class="lead">고객 데이터·업무에 맞춰 연동과 조회 범위를 구성한 뒤, 안전하게 활용을 시작합니다.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>상담·데모</h3><p>활용 목적과 데이터 환경을 함께 확인합니다.</p></div>
+      <div class="step"><div class="n">2</div><h3>데이터 연동·범위 설정</h3><p>조회할 데이터 소스를 연결하고 조회 가능한 범위를 설정합니다.</p></div>
+      <div class="step"><div class="n">3</div><h3>도메인 튜닝</h3><p>고객 업무 용어·집계 규칙에 맞게 응답 방식을 조정합니다.</p></div>
+      <div class="step"><div class="n">4</div><h3>활용 시작</h3><p>실제 질의를 시작하고, 초기 사용을 함께 점검합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">자주 묻는 질문</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>AI가 틀린 답(환각)을 주지는 않나요?</summary>
+        <div class="faq-a">추측으로 답하지 않고, 질문을 데이터 조회 질의로 바꿔 실제 데이터를 조회한 결과로 답합니다. 답과 함께 사용한 조회 조건을 보여줘 숫자의 근거를 확인할 수 있고, 조회 전용 검사·의미 검증·오류 자동 보정을 거칩니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>AI가 우리 데이터를 바꾸거나 지우지는 않나요?</summary>
+        <div class="faq-a">AI가 만드는 질의는 조회(SELECT)만 허용합니다. 추가·수정·삭제 같은 변경 명령은 실행 전 검사에서 차단됩니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>민감한 데이터는 안전한가요?</summary>
+        <div class="faq-a">비밀번호 등 민감 컬럼은 조회 대상에서 처음부터 제외하고, DB 접속 정보는 암호화해 보관합니다. 내부 오류·원시 에러도 사용자 화면에 그대로 노출하지 않습니다. SyncLife는 ISO 정보보호경영시스템 인증을 보유하고 있습니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>지금 바로 쓸 수 있는 기능은 무엇인가요?</summary>
+        <div class="faq-a">현재 제공 기능은 자연어 데이터 질의, 멀티턴 대화, 물류 도메인 특화 응답, 답변 근거 제시입니다. 비정형 주문서 변환과 문서·리포트 자동화는 개발 예정(로드맵)입니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>사용자별 접근 권한 제어는 되나요?</summary>
+        <div class="faq-a">현재는 조회 전용으로 안전하게 동작합니다. 사용자 인증과 테넌트별 데이터 격리, 사용자별 세분화 권한은 외부 공개 전 단계적으로 적용할 예정입니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary>데이터 분석을 잘 모르는 직원도 쓸 수 있나요?</summary>
+        <div class="faq-a">네. 평소 쓰는 말로 질문하면 되고 쿼리 문법은 필요 없습니다. 채팅하듯 묻고 이어서 후속 질문을 할 수 있습니다.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 CTA -->
+<section>
+  <div class="container">
+    <div class="download-band">
+      <div>
+        <h3>AI 에이전트 도입을 검토 중이신가요?</h3>
+        <p>도입 상담을 신청하시거나, 브로셔·데모로 먼저 확인하세요. <br>전화 02-811-2811 (평일 09:00–17:00)</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="contact?type=CONSULT&solution=AI" class="btn btn-primary">도입 상담 신청</a>
+        <a href="contact?type=DEMO&solution=AI" class="btn btn-outline">데모 요청</a>
+        <a href="assets/synclife-ai-brochure.pdf" download class="btn btn-outline">브로셔 다운로드</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="brand" style="font-size:1.6rem"><span class="logo"></span>SyncLife</div>
+      <div class="foot-actions">
+        <a href="assets/synclife-company.pdf" download class="btn btn-outline" style="color:#fff;border-color:#475569">회사소개서 다운로드</a>
+        <!-- TODO: 사업자등록번호 확정 시 공정위(FTC) 사업자정보공개 링크로 교체 -->
+        <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1388703297" target="_blank" rel="noopener" class="btn btn-outline" style="color:#fff;border-color:#475569">사업자정보확인</a>
+      </div>
+    </div>
+    <!-- 회사 정보: 주소·대표자명·사업자등록번호 반영완료 / 통신판매업신고=해당없음 -->
+    <div class="foot-biz">
+      <div><b>Korea Office</b>서울시 금천구 가산디지털1로 128 STXV타워 1302호 · (주)싱크라이프</div>
+      <div><b>TEL</b>02-811-2811 &nbsp;&nbsp; <b>E-MAIL</b>support@synclife.co.kr</div>
+      <div style="margin-top:8px"><b>대표자명</b>이진호 &nbsp;&nbsp; <b>사업자등록번호</b>138-87-03297</div>
+    </div>
+    <div class="foot-certs">
+      <span class="foot-cert">ISO 정보보호경영시스템</span>
+      <span class="foot-cert">벤처기업 확인</span>
+      <span class="foot-cert">기업부설 연구개발전담부서</span>
+      <span class="foot-cert">중소기업 확인</span>
+      <span style="margin-left:auto;color:#64748b;font-size:.85rem"><a href="privacy" style="color:#94a3b8;margin-right:14px">개인정보처리방침</a>© 2026 SyncLife. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="float-chat"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.6-1.8 3.7-2.5.6.1 1.3.1 2 .1 5.5 0 10-3.6 10-8s-4.5-8-10-8z"/></svg><span>카카오톡 상담</span></a>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click',function(){
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+  document.querySelectorAll('.feat-explorer').forEach(function(ex){
+    ex.querySelectorAll('.feat-tabs button').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var t=btn.getAttribute('data-tab');
+        ex.querySelectorAll('.feat-tabs button').forEach(function(b){b.classList.toggle('on',b===btn);});
+        ex.querySelectorAll('.feat-panel').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-tab')===t);});
+      });
+    });
+  });
+</script>
+</body>
+</html>
