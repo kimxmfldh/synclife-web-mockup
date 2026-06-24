@@ -7,7 +7,7 @@
 <meta name="description" content="AI 상담사에게 채팅으로 물어보세요. 솔루션·규모·환경을 입력하면 예상 구성과 견적 범위를 안내합니다. SyncLife AI 견적.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=20260624d">
+<link rel="stylesheet" href="assets/css/style.css?v=20260624e">
 </head>
 <body>
 
@@ -70,6 +70,8 @@
         <button class="chat-chip">AI 에이전트는 뭘 할 수 있나요?</button>
       </div>
 
+      <div class="chat-quota" id="chatQuota"></div>
+
       <div class="chat-input">
         <textarea id="chatText" rows="1" placeholder="메시지를 입력하세요  (예: 창고 2개 규모 WMS 견적 알려주세요)"></textarea>
         <button class="chat-send" id="chatSend" aria-label="보내기">
@@ -118,7 +120,28 @@
     var input = document.getElementById('chatText');
     var sendBtn = document.getElementById('chatSend');
     var chips = document.getElementById('chatChips');
-    var busy = false;
+    var quotaEl = document.getElementById('chatQuota');
+    var inputBar = document.querySelector('.chat-input');
+    var MAX = 10;
+    var count = 0;
+    var busy = false, locked = false;
+
+    function updateQuota(){
+      var left = Math.max(0, MAX - count);
+      if (left > 0) {
+        quotaEl.classList.remove('done');
+        quotaEl.innerHTML = 'AI 견적 질의는 <b>10회까지</b> 가능합니다 · 남은 횟수 <b>' + left + '회</b>';
+      } else {
+        quotaEl.classList.add('done');
+        quotaEl.innerHTML = 'AI 견적 질의 10회를 모두 사용했어요. 더 정확한 견적은 상담으로 도와드릴게요.';
+      }
+    }
+    function lock(){
+      locked = true;
+      inputBar.classList.add('locked');
+      chips.classList.add('locked');
+      input.disabled = true; sendBtn.disabled = true;
+    }
 
     function esc(s){ return s.replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
     function scrollDown(){ body.scrollTop = body.scrollHeight; }
@@ -146,17 +169,17 @@
       if (both) {
         return 'WMS와 CRM&amp;OMS를 <b>함께 도입</b>하면 거래처 → 수주 → 재고 → 출고가 하나의 흐름으로 연결돼 데이터 이중 입력이 사라집니다.'
              + '<p>패키지 도입 시 단품 대비 합리적으로 구성되며, 규모(창고·채널 수)와 커스터마이징 범위에 따라 견적이 달라집니다.</p>'
-             + pills(['WMS', 'CRM&amp;OMS', '통합 도입']) + CTA;
+             + pills(['WMS', 'CRM&amp;OMS', '통합 도입']);
       }
       if (wms) {
         return '<b>WMS 창고관리</b>는 입고·라벨 발행, 로케이션 적치, 재고(선입선출 FIFO), 주문 피킹, 출고, 화주별 정산까지 포함합니다.'
              + '<p>소규모(창고 1~2개)부터 다센터·다화주까지 확장 가능합니다. 운영 규모를 알려주시면 예상 범위를 더 좁혀 드릴게요.</p>'
-             + pills(['입고·라벨', '로케이션 적치', '재고 FIFO', '출고 피킹', '화주 정산']) + CTA;
+             + pills(['입고·라벨', '로케이션 적치', '재고 FIFO', '출고 피킹', '화주 정산']);
       }
       if (oms) {
         return '<b>CRM &amp; OMS</b>는 거래처(고객사)를 중심으로 영업·견적(RFQ)·수주·발주·채권/정산을 관리합니다. 도매·유통부터 수출입·제조 거래까지 대응합니다.'
              + '<p>기존 회계·ERP·WMS와의 연동 범위에 따라 구성이 달라집니다.</p>'
-             + pills(['거래처·영업', '견적 RFQ', '수주·발주', '채권·정산']) + CTA;
+             + pills(['거래처·영업', '견적 RFQ', '수주·발주', '채권·정산']);
       }
       if (has('온프','클라우드','aws','AWS','IDC','idc','환경','구축','설치','서버')) {
         return '클라우드(AWS)와 온프레미스(IDC) <b>모두 지원</b>합니다.'
@@ -173,26 +196,35 @@
       }
       if (has('가격','비용','얼마','금액','견적','요금','단가')) {
         return '정확한 금액은 <b>솔루션 조합 · 운영 규모 · 커스터마이징 범위</b>에 따라 달라집니다.'
-             + '<p>사용하실 솔루션(WMS·OMS·AI)과 창고/채널 규모, 구축 환경을 알려주시면 예상 범위를 좁혀 드릴게요.</p>' + CTA;
+             + '<p>사용하실 솔루션(WMS·OMS·AI)과 창고/채널 규모, 구축 환경을 알려주시면 예상 범위를 좁혀 드릴게요.</p>';
       }
       return '말씀 주신 내용을 도입 관점에서 정리해 볼게요. 어떤 솔루션(<b>WMS · CRM&amp;OMS · AI 에이전트</b>)을 어느 <b>규모</b>로, 어떤 <b>환경</b>(클라우드/온프레미스)에서 운영하실 계획인지 알려주시면 더 구체적으로 안내드릴 수 있어요.';
     }
 
     function send(raw){
       var text = (raw || input.value).trim();
-      if (!text || busy) return;
+      if (!text || busy || locked) return;
       busy = true; sendBtn.disabled = true;
       addMsg('user', esc(text));
       input.value = ''; input.style.height = 'auto';
+      count++;
 
       var typing = addMsg('ai', '<span></span><span></span><span></span>', 'typing');
       setTimeout(function(){
         body.removeChild(typing);
         addMsg('ai', reply(text));
-        busy = false; sendBtn.disabled = false;
-        input.focus();
+        updateQuota();
+        if (count >= MAX) {
+          addMsg('ai', '<b>무료 AI 견적 질의 10회</b>를 모두 사용하셨어요. 입력해 주신 내용을 바탕으로 담당자가 정확한 구성과 견적을 안내해 드릴게요.' + CTA);
+          lock();
+        } else {
+          busy = false; sendBtn.disabled = false;
+          input.focus();
+        }
       }, 850 + Math.random() * 500);
     }
+
+    updateQuota();
 
     sendBtn.addEventListener('click', function(){ send(); });
     input.addEventListener('keydown', function(e){
