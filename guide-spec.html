@@ -7,7 +7,7 @@
 <meta name="description" content="표준 WMS·CRM&OMS를 우리 업무에 맞추려면 무엇을 정리해야 할까요? 도입·커스터마이징 요구사항을 정리하면 정확한 제안과 의도대로의 결과를 얻을 수 있습니다.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=20260624e">
+<link rel="stylesheet" href="assets/css/style.css?v=20260624f">
 </head>
 <body>
 
@@ -135,8 +135,70 @@
   </div>
 </section>
 
-<!-- 점검 기능 리스트 (물류·유통 도메인) -->
+<!-- 요구사항 정리 예시 (표) -->
 <section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Example</span>
+      <h2 class="h2">예시로 보는 요구사항 정리</h2>
+      <p class="lead">막막하실 땐 아래 표처럼 <strong style="color:var(--ink)">한 줄에 요구사항 하나씩</strong> 적어 보세요. 이 형식 그대로 엑셀에 옮겨 적으셔도 좋습니다.</p>
+    </div>
+
+    <div class="req-eg">
+      <div class="req-eg-cap">요구사항 정의서 예시 — 물류·유통 도매업체</div>
+      <div class="table-scroll">
+        <table class="req-table">
+          <thead>
+            <tr>
+              <th>요구사항 ID</th>
+              <th>구분</th>
+              <th>요구사항명</th>
+              <th>상세 설명</th>
+              <th>우선순위</th>
+              <th>표준 / 커스터마이징</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>REQ-001</td><td>입고</td><td>박스 단위 검수</td>
+              <td>입고 검수 시 바코드를 박스 단위로 스캔하고, 수량 불일치가 발생하면 자동 보류 처리</td>
+              <td><span class="tag t-must">필수</span></td><td><span class="kind k-std">표준</span></td>
+            </tr>
+            <tr>
+              <td>REQ-002</td><td>출고</td><td>출고 취소 승인</td>
+              <td>출고 취소는 현장에서 바로 처리하지 않고 관리자 승인 후에만 취소 가능</td>
+              <td><span class="tag t-must">필수</span></td><td><span class="kind k-cust">커스터마이징</span></td>
+            </tr>
+            <tr>
+              <td>REQ-003</td><td>정산</td><td>화주별 월마감 정산</td>
+              <td>화주(고객사)별로 월 단위 정산을 마감하고 거래명세서를 자동 생성</td>
+              <td><span class="tag t-must">필수</span></td><td><span class="kind k-std">표준</span></td>
+            </tr>
+            <tr>
+              <td>REQ-004</td><td>연동</td><td>쇼핑몰 주문 자동 수집</td>
+              <td>카페24·스마트스토어 등 3개 채널의 주문을 자동으로 수집해 출고 처리</td>
+              <td><span class="tag t-must">필수</span></td><td><span class="kind k-cust">커스터마이징</span></td>
+            </tr>
+            <tr>
+              <td>REQ-005</td><td>권한</td><td>단가 조회 권한 제한</td>
+              <td>상품 단가·원가 정보는 관리자 권한 계정만 조회 가능하도록 제한</td>
+              <td><span class="tag t-opt">선택</span></td><td><span class="kind k-std">표준</span></td>
+            </tr>
+            <tr>
+              <td>REQ-006</td><td>AI</td><td>비정형 주문서 자동 변환</td>
+              <td>메일·엑셀로 받은 제각각의 주문서를 표준 주문 형식으로 자동 변환</td>
+              <td><span class="tag t-later">향후</span></td><td><span class="kind k-road">로드맵</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="req-eg-note">※ 처음부터 완벽할 필요는 없습니다. 떠오르는 항목부터 채우고, 빈 칸은 상담에서 함께 정리해 드립니다. · <b>구분</b>은 아래 「점검하면 좋은 기능 목록」을 참고하세요.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 점검 기능 리스트 (물류·유통 도메인) -->
+<section>
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Feature checklist</span>

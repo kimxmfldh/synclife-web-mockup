@@ -595,6 +595,27 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.02em;line-height:1.25}
 .est-pill{display:inline-block;margin:4px 6px 0 0;background:rgba(14,165,233,.1);color:var(--sky-dark);
   font-weight:600;font-size:.85rem;padding:5px 11px;border-radius:6px}
 
+/* ===== 요구사항 정리 예시 표 (guide-spec) ===== */
+.req-eg{max-width:1020px;margin:0 auto;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
+.req-eg-cap{padding:14px 20px;border-bottom:1px solid var(--border);font-weight:700;color:var(--ink);background:var(--bg-soft);font-size:.95rem}
+.table-scroll{overflow-x:auto}
+.req-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:820px}
+.req-table th,.req-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.req-table th{color:var(--muted);font-weight:700;font-size:.8rem;white-space:nowrap;border-bottom:2px solid var(--border);letter-spacing:.01em}
+.req-table td:first-child{font-weight:600;color:var(--sky-dark);white-space:nowrap;font-variant-numeric:tabular-nums}
+.req-table tbody tr:last-child td{border-bottom:none}
+.req-table tbody tr:hover{background:var(--bg-soft)}
+.req-table .tag{display:inline-block;padding:3px 9px;border-radius:6px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.req-table .t-must{background:rgba(14,165,233,.12);color:var(--sky-dark)}
+.req-table .t-opt{background:#eef1f5;color:#64748b}
+.req-table .t-later{background:#f1f0fb;color:#6366f1}
+.req-table .kind{font-weight:600}
+.req-table .k-std{color:var(--muted)}
+.req-table .k-cust{color:var(--indigo)}
+.req-table .k-road{color:#94a3b8}
+.req-eg-note{font-size:.85rem;color:var(--muted);padding:14px 20px;margin:0;border-top:1px solid var(--border);background:var(--bg-soft)}
+@media(max-width:768px){.req-table{font-size:.85rem}}
+
 /* ===== AI 견적 챗봇 (ai-estimate) ===== */
 .page-hero.slim{padding:26px 0 22px}
 .page-hero.slim h1{font-size:clamp(1.35rem,2.2vw,1.8rem);margin-bottom:6px}
