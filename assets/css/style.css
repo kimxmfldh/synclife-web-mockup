@@ -618,6 +618,14 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.02em;line-height:1.25}
 .req-eg-note{font-size:.85rem;color:var(--muted);padding:14px 20px;margin:0;border-top:1px solid var(--border);background:var(--bg-soft)}
 @media(max-width:768px){.req-table{font-size:.85rem}}
 
+/* 점검 기능 체크리스트 */
+.req-check .card h3{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+.cat-tag{display:inline-block;font-size:.7rem;font-weight:700;color:var(--sky-dark);background:rgba(14,165,233,.1);padding:2px 8px;border-radius:6px;vertical-align:middle;letter-spacing:.01em}
+.cat-tag.c-gray{color:#64748b;background:#eef1f5}
+.chk-ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
+.chk-ul li{position:relative;padding-left:27px;color:var(--text);font-size:.92rem;line-height:1.45}
+.chk-ul li::before{content:"";position:absolute;left:0;top:2px;width:17px;height:17px;border:1.5px solid #cbd5e1;border-radius:4px;background:#fff}
+
 /* ===== AI 견적 챗봇 (ai-estimate) ===== */
 .page-hero.slim{padding:26px 0 22px}
 .page-hero.slim h1{font-size:clamp(1.35rem,2.2vw,1.8rem);margin-bottom:6px}

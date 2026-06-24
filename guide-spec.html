@@ -7,7 +7,7 @@
 <meta name="description" content="표준 WMS·CRM&OMS를 우리 업무에 맞추려면 무엇을 정리해야 할까요? 도입·커스터마이징 요구사항을 정리하면 정확한 제안과 의도대로의 결과를 얻을 수 있습니다.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=20260624g">
+<link rel="stylesheet" href="assets/css/style.css?v=20260624h">
 </head>
 <body>
 
@@ -223,59 +223,63 @@
     <div class="section-head">
       <span class="eyebrow">Feature checklist</span>
       <h2 class="h2">도입 시 점검하면 좋은 기능 목록</h2>
-      <p class="lead">요구사항을 정리할 때 참고할 수 있도록, 물류·유통 시스템에서 자주 쓰이는 기능을 정리했습니다. 우리 업무에 필요한 항목을 골라 표시해 보세요.</p>
+      <p class="lead">요구사항을 정리할 때 참고하도록 <strong style="color:var(--ink)">WMS·CRM&amp;OMS·AI 전반</strong>에서 자주 쓰이는 기능을 영역별로 모았습니다. 우리 업무에 필요한 항목을 골라 체크해 보세요.</p>
     </div>
-    <div class="grid grid-3">
+    <div class="grid grid-3 req-check">
 
       <div class="card">
-        <h3>이용 환경</h3>
-        <ul class="spec-ul">
-          <li>PC 웹 / 반응형 웹</li>
-          <li>관리자(백오피스)</li>
-          <li>PDA · 바코드 단말</li>
-          <li>현장 키오스크 단말</li>
+        <h3>거래처 · 영업 <span class="cat-tag">CRM</span></h3>
+        <ul class="chk-ul">
+          <li>거래처 · 고객사 관리</li>
+          <li>영업 기회 · 파이프라인</li>
+          <li>담당자 · 연락처 관리</li>
+          <li>미팅 · 활동 이력</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>입고 · 재고</h3>
-        <ul class="spec-ul">
+        <h3>견적 · 수주 · 발주 <span class="cat-tag">OMS</span></h3>
+        <ul class="chk-ul">
+          <li>견적(RFQ) 관리</li>
+          <li>수주 · 주문 관리</li>
+          <li>발주 · 구매 관리</li>
+          <li>채권 · 채무(여신) 관리</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>입고 · 재고 <span class="cat-tag">WMS</span></h3>
+        <ul class="chk-ul">
           <li>입고 등록 · 검수</li>
-          <li>바코드 / QR 스캔</li>
-          <li>재고 조회 · 조정</li>
-          <li>로케이션(위치) 관리</li>
-          <li>재고 실사</li>
-          <li>유통기한 · 로트 관리</li>
-          <li>안전재고 · 자동 알림</li>
+          <li>바코드 · QR 스캔</li>
+          <li>재고 조회 · 조정 · 실사</li>
+          <li>로케이션 · 유통기한 · 로트</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>출고 · 주문</h3>
-        <ul class="spec-ul">
+        <h3>출고 · 배송 <span class="cat-tag">WMS</span></h3>
+        <ul class="chk-ul">
           <li>주문 수집(채널 연동)</li>
-          <li>출고 지시 · 피킹 · 패킹</li>
+          <li>피킹 · 패킹 · 합포장</li>
           <li>송장 · 거래명세서 출력</li>
-          <li>배송 추적</li>
-          <li>출고 취소 · 반품 · 교환</li>
-          <li>합포장 · 분할 출고</li>
+          <li>반품 · 교환 · 배송 추적</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>정산 · 통계</h3>
-        <ul class="spec-ul">
-          <li>정산 관리(화주·셀러별)</li>
-          <li>일 · 주 · 월 통계</li>
-          <li>기간 · 다중 항목 통계</li>
+        <h3>정산 · 통계 <span class="cat-tag c-gray">공통</span></h3>
+        <ul class="chk-ul">
+          <li>정산 관리(화주 · 셀러별)</li>
+          <li>기간 · 항목별 통계</li>
           <li>대시보드 · 그래프</li>
-          <li>데이터 변경 이력 기록</li>
+          <li>데이터 변경 이력</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>연동 · 자동화</h3>
-        <ul class="spec-ul">
+        <h3>연동 · 자동화 <span class="cat-tag c-gray">공통</span></h3>
+        <ul class="chk-ul">
           <li>택배사 API 연동</li>
           <li>쇼핑몰 · 오픈마켓 연동</li>
           <li>ERP · 회계 시스템 연동</li>
@@ -284,43 +288,32 @@
       </div>
 
       <div class="card">
-        <h3>AI 기능</h3>
-        <ul class="spec-ul">
+        <h3>AI 기능 <span class="cat-tag">AI</span></h3>
+        <ul class="chk-ul">
           <li>비정형 주문서 자동 변환</li>
-          <li>입출고 요청서 자동 작성</li>
           <li>문서 OCR 인식</li>
-          <li>자연어 데이터 질의(Text-to-SQL)</li>
+          <li>자연어 데이터 질의</li>
           <li>이상 탐지 · 수요 예측</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>문서 · 입출력</h3>
-        <ul class="spec-ul">
-          <li>엑셀 임포트 / 익스포트</li>
-          <li>PDF 자동 출력</li>
-          <li>라벨 · 바코드 인쇄</li>
-          <li>대용량 파일 업로드</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>계정 · 권한</h3>
-        <ul class="spec-ul">
+        <h3>계정 · 권한 · 보안 <span class="cat-tag c-gray">공통</span></h3>
+        <ul class="chk-ul">
           <li>로그인 · 인증</li>
           <li>권한 · 등급 관리</li>
-          <li>다중 센터 · 화주 관리(멀티테넌시)</li>
+          <li>멀티테넌시(다센터 · 화주)</li>
           <li>접근 로그 · 감사 추적</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>알림 · 소통</h3>
-        <ul class="spec-ul">
-          <li>이메일 · SMS 알림</li>
-          <li>카카오 알림톡</li>
+        <h3>문서 · 알림 <span class="cat-tag c-gray">공통</span></h3>
+        <ul class="chk-ul">
+          <li>엑셀 임포트 / 익스포트</li>
+          <li>PDF · 라벨 · 바코드 인쇄</li>
+          <li>이메일 · SMS · 알림톡</li>
           <li>앱 푸시 알림</li>
-          <li>내 알림 내역</li>
         </ul>
       </div>
 
