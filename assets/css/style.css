@@ -596,11 +596,13 @@ h1,h2,h3{color:var(--ink);letter-spacing:-.02em;line-height:1.25}
   font-weight:600;font-size:.85rem;padding:5px 11px;border-radius:6px}
 
 /* ===== 요구사항 정리 예시 표 (guide-spec) ===== */
-.req-eg{max-width:1020px;margin:0 auto;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
+.req-eg{max-width:1180px;margin:0 auto;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
 .req-eg-cap{padding:14px 20px;border-bottom:1px solid var(--border);font-weight:700;color:var(--ink);background:var(--bg-soft);font-size:.95rem}
 .table-scroll{overflow-x:auto}
-.req-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:820px}
-.req-table th,.req-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.req-table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:1080px}
+.req-table th,.req-table td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
+.req-table .col-name{font-weight:600;color:var(--ink);white-space:nowrap}
+.req-table .role{color:var(--muted);white-space:nowrap;font-size:.84rem}
 .req-table th{color:var(--muted);font-weight:700;font-size:.8rem;white-space:nowrap;border-bottom:2px solid var(--border);letter-spacing:.01em}
 .req-table td:first-child{font-weight:600;color:var(--sky-dark);white-space:nowrap;font-variant-numeric:tabular-nums}
 .req-table tbody tr:last-child td{border-bottom:none}

@@ -7,7 +7,7 @@
 <meta name="description" content="표준 WMS·CRM&OMS를 우리 업무에 맞추려면 무엇을 정리해야 할까요? 도입·커스터마이징 요구사항을 정리하면 정확한 제안과 의도대로의 결과를 얻을 수 있습니다.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="assets/css/style.css?v=20260624f">
+<link rel="stylesheet" href="assets/css/style.css?v=20260624g">
 </head>
 <body>
 
@@ -141,7 +141,7 @@
     <div class="section-head">
       <span class="eyebrow">Example</span>
       <h2 class="h2">예시로 보는 요구사항 정리</h2>
-      <p class="lead">막막하실 땐 아래 표처럼 <strong style="color:var(--ink)">한 줄에 요구사항 하나씩</strong> 적어 보세요. 이 형식 그대로 엑셀에 옮겨 적으셔도 좋습니다.</p>
+      <p class="lead">막막하실 땐 아래 표처럼 <strong style="color:var(--ink)">한 줄에 요구사항 하나씩</strong>, <strong style="color:var(--ink)">지금 방식(As-Is)</strong>과 <strong style="color:var(--ink)">원하는 모습(To-Be)</strong>을 함께 적어 보세요. 이 형식 그대로 엑셀에 옮겨 적으셔도 좋습니다.</p>
     </div>
 
     <div class="req-eg">
@@ -153,46 +153,66 @@
               <th>요구사항 ID</th>
               <th>구분</th>
               <th>요구사항명</th>
-              <th>상세 설명</th>
+              <th>현재 방식 (As-Is)</th>
+              <th>원하는 동작 (To-Be) · 상세</th>
+              <th>사용 역할</th>
               <th>우선순위</th>
-              <th>표준 / 커스터마이징</th>
+              <th>비고 · 조건</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>REQ-001</td><td>입고</td><td>박스 단위 검수</td>
-              <td>입고 검수 시 바코드를 박스 단위로 스캔하고, 수량 불일치가 발생하면 자동 보류 처리</td>
-              <td><span class="tag t-must">필수</span></td><td><span class="kind k-std">표준</span></td>
+              <td>REQ-001</td><td>입고</td><td class="col-name">박스 단위 입고 검수</td>
+              <td>입고 시 송장과 실물을 눈으로 대조하고 엑셀에 수기로 기록</td>
+              <td>PDA로 박스 바코드를 스캔해 발주 수량과 자동 대조. 수량이 맞지 않으면 해당 입고 건을 <b>검수 보류</b>로 전환하고 관리자에게 알림 → 관리자 확인 후에만 입고 확정</td>
+              <td class="role">입고 담당자 / 센터 관리자</td>
+              <td><span class="tag t-must">필수</span></td>
+              <td>박스 단위(낱개 아님), 입고 시 유통기한 함께 입력</td>
             </tr>
             <tr>
-              <td>REQ-002</td><td>출고</td><td>출고 취소 승인</td>
-              <td>출고 취소는 현장에서 바로 처리하지 않고 관리자 승인 후에만 취소 가능</td>
-              <td><span class="tag t-must">필수</span></td><td><span class="kind k-cust">커스터마이징</span></td>
+              <td>REQ-002</td><td>출고</td><td class="col-name">출고 취소 승인 통제</td>
+              <td>출고 지시 후 취소는 전화로 요청, 시스템에 기록이 남지 않음</td>
+              <td>현장 담당자는 출고 취소를 <b>요청</b>만 하고, 센터 관리자가 승인해야 실제 취소. 취소 사유 필수 입력 + 취소 이력 보관</td>
+              <td class="role">출고 담당자(요청) / 관리자(승인)</td>
+              <td><span class="tag t-must">필수</span></td>
+              <td>이미 송장 출력된 건은 취소 불가 등 예외 정의 필요</td>
             </tr>
             <tr>
-              <td>REQ-003</td><td>정산</td><td>화주별 월마감 정산</td>
-              <td>화주(고객사)별로 월 단위 정산을 마감하고 거래명세서를 자동 생성</td>
-              <td><span class="tag t-must">필수</span></td><td><span class="kind k-std">표준</span></td>
+              <td>REQ-003</td><td>정산</td><td class="col-name">화주별 월마감 정산</td>
+              <td>월말에 엑셀로 화주별 입출고 건수를 집계해 수기 계산</td>
+              <td>화주별 보관료·입출고 작업료를 단가표 기준으로 자동 집계. 월 단위 마감 후 거래명세서·세금계산서 발행, 마감된 달은 데이터 수정 잠금</td>
+              <td class="role">정산 담당자 / 화주(조회)</td>
+              <td><span class="tag t-must">필수</span></td>
+              <td>단가 = 보관료(파렛트·일) + 입출고료(건당)</td>
             </tr>
             <tr>
-              <td>REQ-004</td><td>연동</td><td>쇼핑몰 주문 자동 수집</td>
-              <td>카페24·스마트스토어 등 3개 채널의 주문을 자동으로 수집해 출고 처리</td>
-              <td><span class="tag t-must">필수</span></td><td><span class="kind k-cust">커스터마이징</span></td>
+              <td>REQ-004</td><td>연동</td><td class="col-name">쇼핑몰 주문 자동 수집</td>
+              <td>채널별 관리자 페이지에서 주문을 각각 내려받아 취합</td>
+              <td>카페24·스마트스토어·쿠팡 등 채널 주문을 주기적으로 자동 수집해 출고 대기열에 등록. 채널의 신규/취소/교환 상태도 동기화</td>
+              <td class="role">출고 담당자</td>
+              <td><span class="tag t-must">필수</span></td>
+              <td>연동 채널 목록·API 키(계정) 제공 필요</td>
             </tr>
             <tr>
-              <td>REQ-005</td><td>권한</td><td>단가 조회 권한 제한</td>
-              <td>상품 단가·원가 정보는 관리자 권한 계정만 조회 가능하도록 제한</td>
-              <td><span class="tag t-opt">선택</span></td><td><span class="kind k-std">표준</span></td>
+              <td>REQ-005</td><td>권한</td><td class="col-name">단가·원가 조회 제한</td>
+              <td>모든 직원이 단가표 엑셀을 공유해서 봄</td>
+              <td>상품 단가·원가는 관리자 권한 계정만 조회. 일반 직원 화면에서는 금액 항목을 숨김 처리</td>
+              <td class="role">관리자 / 일반 직원</td>
+              <td><span class="tag t-opt">선택</span></td>
+              <td>권한 등급별 노출 항목 정의 필요</td>
             </tr>
             <tr>
-              <td>REQ-006</td><td>AI</td><td>비정형 주문서 자동 변환</td>
-              <td>메일·엑셀로 받은 제각각의 주문서를 표준 주문 형식으로 자동 변환</td>
-              <td><span class="tag t-later">향후</span></td><td><span class="kind k-road">로드맵</span></td>
+              <td>REQ-006</td><td>AI</td><td class="col-name">비정형 주문서 자동 변환</td>
+              <td>거래처가 메일·엑셀로 제각각 양식의 주문서를 보내면 수기로 재입력</td>
+              <td>다양한 양식의 주문서(메일 본문·엑셀·이미지)를 표준 주문 형식으로 자동 변환해 수주 등록. 변환 결과는 담당자가 확인 후 확정</td>
+              <td class="role">수주 담당자</td>
+              <td><span class="tag t-later">향후</span></td>
+              <td>도입 로드맵 항목</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="req-eg-note">※ 처음부터 완벽할 필요는 없습니다. 떠오르는 항목부터 채우고, 빈 칸은 상담에서 함께 정리해 드립니다. · <b>구분</b>은 아래 「점검하면 좋은 기능 목록」을 참고하세요.</p>
+      <p class="req-eg-note">※ 처음부터 완벽할 필요는 없습니다. 떠오르는 항목부터 채우시고, 빈 칸은 상담에서 함께 정리해 드립니다. · <b>표준 기능으로 가능한지, 커스터마이징이 필요한지는 SyncLife가 검토해 알려드리니</b> 고객사는 "무엇이 필요한지"만 적으시면 됩니다. · <b>구분</b>은 아래 「점검하면 좋은 기능 목록」을 참고하세요.</p>
     </div>
   </div>
 </section>
